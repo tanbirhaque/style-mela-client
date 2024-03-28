@@ -23,7 +23,7 @@ export default function RootLayout({
       </head>
       <body
         // className={inter.className}
-        className="font-kumbh"
+        className="font-kumbh dark:bg-gray-800"
       >
         <TopNav></TopNav>
         <NavBar></NavBar>
