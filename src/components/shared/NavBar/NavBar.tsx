@@ -6,11 +6,16 @@ import ToggleTheme from '../ToggleTheme/ToggleTheme';
 import { HiMagnifyingGlass } from "react-icons/hi2";
 import { SlBasket } from "react-icons/sl";
 import { CiLogin } from "react-icons/ci";
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+import './nav.css'
 
 const NavBar = () => {
     useEffect(() => {
         initFlowbite();
     }, []);
+
+    const pathname = usePathname()
 
 
 
@@ -18,6 +23,7 @@ const NavBar = () => {
         <div>
             <nav className="bg-white border-gray-200 dark:bg-gray-800 dark:border-gray-700">
                 <div className="max-w-[1600px] flex flex-wrap items-center justify-between mx-auto p-4 2xl:px-0">
+                    {/* Navbar Left */}
                     <div className='flex items-center w-2/4'>
                         <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
                             <span className="self-center text-[40px] font-semibold whitespace-nowrap dark:text-white">Style Mela</span>
@@ -29,22 +35,45 @@ const NavBar = () => {
                                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
                             </svg>
                         </button> */}
-                        <div className="hidden w-full md:block md:w-full">
+
+                        {/* NavLinks */}
+                        <div>
+                            <ul className='flex gap-5 mr-5 text-[20px] dark:text-white font-medium'>
+                                <li>
+                                    <Link
+                                        href={'/'}
+                                        className={`${pathname === '/' ? 'active' : ''}`}
+                                    >
+                                        Home
+                                    </Link>
+                                </li>
+                                <li className={`${pathname === '/shop' ? 'active' : ''}`}>
+                                    <Link href={'/shop'}>Shop</Link>
+                                </li>
+                            </ul>
+                        </div>
+
+                        {/* Search Bar */}
+                        <div className="hidden w-[150px] md:block md:hover:w-full transition-all duration-700 ease-linear">
                             <div className='relative'>
                                 <label htmlFor="search" className='absolute top-1/2 -translate-y-1/2 left-2'><HiMagnifyingGlass className='text-[22px]'></HiMagnifyingGlass></label>
                                 <input
                                     name='search'
                                     type="text"
                                     className='border border-black min-w-full h-[32px] rounded-xl pl-8 outline-0'
+                                    placeholder='Search here...'
                                 />
                             </div>
                         </div>
                     </div>
+                    {/* Navbar Right */}
                     <div className='flex items-center'>
+                        {/* Theme changer toggle button */}
                         <div>
                             <ToggleTheme></ToggleTheme>
                         </div>
                         <div className='bg-black dark:bg-white h-[25px] w-[1px] mx-5'></div>
+                        {/* Cart/Basket button */}
                         <div className='relative flex gap-3 items-center'>
                             <SlBasket className='text-[25px] dark:text-white'></SlBasket>
                             <span className="absolute -top-2 left-3 bg-[#fa8c16] p-[2px] w-[20px] h-[20px] text-[12px] text-white font-semibold rounded-full flex items-center justify-center">11</span>
@@ -53,6 +82,7 @@ const NavBar = () => {
                             </div>
                         </div>
                         <div className='bg-black dark:bg-white h-[25px] w-[1px] mx-5'></div>
+                        {/* Login button */}
                         <div className='flex items-center gap-2'>
                             <CiLogin className='text-[27px] dark:text-white'></CiLogin>
                             <p className='dark:text-white'>Login</p>
