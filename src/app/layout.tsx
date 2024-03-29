@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+// import { Inter } from "next/font/google";
+import { kumbh, jost } from "./fonts";
 import "./globals.css";
 import NavBar from "@/components/shared/NavBar/NavBar";
 import TopNav from "@/components/shared/TopNav/TopNav";
 // import { initFlowbite } from "flowbite";
 
-// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,7 +18,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="">
+    <html lang="en"
+      className={`${kumbh.variable} ${jost.variable}`}
+    >
       <head>
       </head>
       <body

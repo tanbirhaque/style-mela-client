@@ -2,12 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
-
-@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
-
+/* Font Variables starts */
 .font-kumbh {
-    font-family: "Kumbh Sans", sans-serif;
+    font-family: var(--font-kumbh);
 }
+
+.font-jost {
+    font-family: var(--font-jost);
+}
+
+/* Font Variables Ends */
+
 
 .theme-switch {
     --toggle-size: 10px;
