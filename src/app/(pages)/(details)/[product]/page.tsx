@@ -8,7 +8,8 @@ import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
-import './style.css';
+// import styles from './style.module.css'
+import './style.css'
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 // Importing Product Json Data
@@ -75,7 +76,7 @@ const Page = ({ params }: { params: { product: string } }) => {
                         freeMode={true}
                         watchSlidesProgress={true}
                         modules={[FreeMode, Navigation, Thumbs]}
-                        className="mySwiper"
+                        className="mySwiper prevSlide"
                     >
                         {
                             finalPictureArray?.map(item => (
