@@ -1,18 +1,31 @@
 "use client"
 {/* TODO: Dynamic Ratings */ }
-import React, { useEffect } from 'react';
+import React, { useState } from 'react';
 import { Rating } from '@smastrom/react-rating'
-
 import '@smastrom/react-rating/style.css'
 import './style.css'
-import { initFlowbite } from 'flowbite';
+import CircleFillHoverBtn from '@/components/shared/Buttons/CircleFillHoverBtn/CircleFillHoverBtn';
 
 const ProductDetails = () => {
-    // const [rating, setRating] = useState(0) // Initial value
-    // #ffa700
-    useEffect(() => {
-        initFlowbite();
-    }, []);
+    const [quantity, setQuantity] = useState(0)
+
+    const handleIncrementQuantity = () => {
+        const increment = quantity + 1
+        setQuantity(increment)
+    }
+
+    const handleDecrementQuantity = () => {
+        let decrement = quantity
+        if (quantity > 0) {
+            decrement -= 1
+        }
+        else {
+            decrement = 0
+        }
+        setQuantity(decrement)
+    }
+
+
 
     return (
         <div className='pl-[72px] mt-[92px]'>
@@ -35,13 +48,13 @@ const ProductDetails = () => {
             <div>
                 {/* Cart value */}
                 <div>
-                    <form className="max-w-xs mx-auto">
+                    <form className="max-w-xs">
                         <div className="relative flex items-center max-w-[8rem]">
-                            {/* Minus Button */}
+                            {/* Decrement Button */}
                             <button
                                 type="button"
                                 id="decrement-button"
-                                data-input-counter-decrement="quantity-input"
+                                onClick={handleDecrementQuantity}
                                 className="bg-[#f5f5f5] dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 rounded-s-lg p-3 h-[53px] focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none"
                             >
                                 <svg className="w-3 h-3 text-[#fa8c16]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 2">
@@ -53,20 +66,18 @@ const ProductDetails = () => {
                             <input
                                 type="text"
                                 id="quantity-input"
-                                data-input-counter data-input-counter-min="1"
-                                data-input-counter-max="50"
                                 aria-describedby="helper-text-explanation"
                                 className="bg-[#f5f5f5] border-x-0 border-gray-300 h-[53px] text-center text-[#3d3d3d] text-[20px] font-extrabold focus:ring-blue-500 focus:border-blue-500 block w-full py-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                                 placeholder="999"
-                                value="5"
+                                value={quantity}
                                 required
                             />
 
-                            {/* Plus Button */}
+                            {/* Increment Button */}
                             <button
                                 type="button"
                                 id="increment-button"
-                                data-input-counter-increment="quantity-input"
+                                onClick={handleIncrementQuantity}
                                 className="bg-[#f5f5f5] dark:bg-gray-700 dark:hover:bg-gray-600 dark:border-gray-600 hover:bg-gray-200 rounded-e-lg p-3 h-[53px] focus:ring-gray-100 dark:focus:ring-gray-700 focus:ring-2 focus:outline-none"
                             >
                                 <svg className="w-3 h-3 text-[#fa8c16]" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 18 18">
@@ -77,7 +88,9 @@ const ProductDetails = () => {
                     </form>
                 </div>
                 {/* Submit Btn */}
-                <div></div>
+                <div>
+                    <CircleFillHoverBtn></CircleFillHoverBtn>
+                </div>
             </div>
         </div>
     );
