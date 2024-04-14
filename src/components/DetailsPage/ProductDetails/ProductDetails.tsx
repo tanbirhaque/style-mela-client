@@ -5,6 +5,8 @@ import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
 import './style.css'
 import CircleFillHoverBtn from '@/components/shared/Buttons/CircleFillHoverBtn/CircleFillHoverBtn';
+import { PiHeartLight } from "react-icons/pi";
+import { PiShareNetworkLight } from "react-icons/pi";
 
 const ProductDetails = () => {
     const [quantity, setQuantity] = useState(0)
@@ -25,8 +27,7 @@ const ProductDetails = () => {
         setQuantity(decrement)
     }
 
-
-
+    
     return (
         <div className='pl-[72px] mt-[92px]'>
             <div className='flex gap-3 mb-[10px]'>
@@ -36,16 +37,16 @@ const ProductDetails = () => {
                 />
                 <p>(3 customer reviews)</p>
             </div>
-            <div className='mb-[30px]'>
+            <div>
                 {/* Title */}
                 <h2 className='text-[30px] font-extrabold font-jost mb-5'>Aqua Globes</h2>
                 {/* Price */}
                 <h3 className='text-4xl font-bold text-[#3d3d3d] mb-4'>$125.00</h3>
                 {/* Short Description */}
-                <p className='text-[#333] mb-4 max-w-[430px]'>This NoiseStorm font is inspired by Classic Retro and Vintage apparel, headlines, signage, logo, quote, apparel and other creative applications.</p>
+                <p className='text-[#333] mb-4 max-w-[430px] text-[16px]'>This NoiseStorm font is inspired by Classic Retro and Vintage apparel, headlines, signage, logo, quote, apparel and other creative applications.</p>
             </div>
             {/* Add to cart */}
-            <div className='flex gap-3'>
+            <div className='flex gap-3 mt-[40px]'>
                 {/* Cart value */}
                 <div>
                     <form className="max-w-xs">
@@ -91,6 +92,21 @@ const ProductDetails = () => {
                 <div>
                     <CircleFillHoverBtn btnText={'Add To Cart'}></CircleFillHoverBtn>
                 </div>
+            </div>
+            {/* Wishlist and Share */}
+            <div className='flex items-center gap-6 mt-12'>
+                <div className='w-fit text-[19px] border border-gray-300 flex items-center gap-5 px-5 py-4 rounded-[10px] '>
+                    <p>Add To Wishlist</p>
+                    <span><PiHeartLight className='text-[22px]'></PiHeartLight></span>
+                </div>
+                <div className='flex items-center gap-3 text-[19px]'>
+                    <p>Share</p>
+                    <span><PiShareNetworkLight className='text-[22px]'></PiShareNetworkLight></span>
+                </div>
+            </div>
+            {/* Category */}
+            <div className='mt-6'>
+                <h3 className='font-bold'>Category <span className='text-[#858997]'>Wigs</span></h3>
             </div>
         </div>
     );
