@@ -5,16 +5,16 @@
         "description": "Beautiful long curly wig suitable for various occasions.",
         "pictures": [
             {
+                "url": "https://www.newbeauty.com/wp-content/uploads/2021/04/extensions.png",
+                "isThumbnail": false
+            },
+            {
+                "url": "https://www.newbeauty.com/wp-content/uploads/2021/04/extensions.png",
+                "isThumbnail": false
+            },
+            {
                 "url": "https://demo.phlox.pro/shop-furniture-2/wp-content/uploads/sites/258/2020/11/Group-8070-470x470.jpg",
                 "isThumbnail": true
-            },
-            {
-                "url": "https://www.newbeauty.com/wp-content/uploads/2021/04/extensions.png",
-                "isThumbnail": false
-            },
-            {
-                "url": "https://www.newbeauty.com/wp-content/uploads/2021/04/extensions.png",
-                "isThumbnail": false
             }
         ],
         "color": "Black",

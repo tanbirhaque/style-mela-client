@@ -10,7 +10,7 @@ interface ProductCardProps {
 
 const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     const thumIMG = product.pictures.find(thumImg => thumImg?.isThumbnail)
-    console.log(product.id);
+    // console.log(product.id);
 
     return (
         <Link href={`/${product?.id}`}>
