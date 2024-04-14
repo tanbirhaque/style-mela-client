@@ -38,16 +38,16 @@ const NavBar = () => {
 
                         {/* NavLinks */}
                         <div>
-                            <ul className='flex gap-5 mr-5 text-[20px] dark:text-white font-medium'>
+                            <ul className='flex gap-5 mr-5 text-[20px] dark:text-white font-normal'>
                                 <li>
                                     <Link
                                         href={'/'}
-                                        className={`${pathname === '/' ? 'active' : ''}`}
+                                        className={`${pathname === '/' ? 'active' : 'hover:text-[#fa8c16]'}`}
                                     >
                                         Home
                                     </Link>
                                 </li>
-                                <li className={`${pathname === '/shop' ? 'active' : ''}`}>
+                                <li className={`${pathname === '/shop' ? 'active' : 'hover:text-[#fa8c16]'}`}>
                                     <Link href={'/shop'}>Shop</Link>
                                 </li>
                             </ul>

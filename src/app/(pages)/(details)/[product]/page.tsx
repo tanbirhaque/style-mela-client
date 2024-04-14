@@ -1,17 +1,5 @@
-"use client"
-import Image from 'next/image';
-import React, { useState } from 'react';
-// Import Swiper React components
-import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/free-mode';
-import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
-// import styles from './style.module.css'
-import './style.css'
-// import required modules
-import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
+import ProductPictures from '@/components/DetailsPage/ProductPictures/ProductPictures';
+// Todo: Remove the client
 // Importing Product Json Data
 import products from '@/data/democard.json'
 
@@ -31,71 +19,17 @@ const Page = ({ params }: { params: { product: string } }) => {
     // console.log(Swiper);
 
 
-    const [thumbsSwiper, setThumbsSwiper] = useState<any | null>(null);
+
 
 
     return (
-        <div>
-            <>
-                {/* Main Product Images */}
-                <div className='w-[765px] h-[765px]'>
-                    <Swiper
-                        loop={true}
-                        spaceBetween={10}
-                        navigation={true}
-                        // thumbs={{ swiper: thumbsSwiper }}
-                        thumbs={{ swiper: thumbsSwiper }}
-                        modules={[FreeMode, Navigation, Thumbs]}
-                        className="mySwiper2"
-                    >
-                        {
-                            finalPictureArray?.map(item => (
-                                <div key={item.url}>
-                                    <SwiperSlide>
-                                        <Image
-                                            className='min-w-[765px] min-h-[765px]'
-                                            src={item.url}
-                                            width={765}
-                                            height={765}
-                                            alt='Product Main Images'
-                                        />
-                                    </SwiperSlide>
-                                </div>
-                            ))
-                        }
-                    </Swiper>
-                </div>
-                {/* Preview Images */}
-                <div className='w-[765px] h-[132px]'>
-                    <Swiper
-                        // onSwiper={setThumbsSwiper}
-                        onSwiper={(swiper) => setThumbsSwiper(swiper)}
-                        loop={true}
-                        spaceBetween={10}
-                        slidesPerView={4}
-                        freeMode={true}
-                        watchSlidesProgress={true}
-                        modules={[FreeMode, Navigation, Thumbs]}
-                        className="mySwiper prevSlide"
-                    >
-                        {
-                            finalPictureArray?.map(item => (
-                                <div key={item.url}>
-                                    <SwiperSlide>
-                                        <Image
-                                            className='min-w-[132px] min-h-[132px]'
-                                            src={item.url}
-                                            width={765}
-                                            height={765}
-                                            alt='Product Preview Images'
-                                        />
-                                    </SwiperSlide>
-                                </div>
-                            ))
-                        }
-                    </Swiper>
-                </div>
-            </>
+        <div className='max-w-[1600px] mx-auto mt-[50px]'>
+            <div>
+                <ProductPictures finalPictureArray={finalPictureArray}></ProductPictures>
+            </div>
+            <div>
+
+            </div>
         </div>
     )
 };

@@ -13,3 +13,11 @@ export interface Product {
     price: number,
     discount: number
 }
+
+
+export interface ProductPicturesProps {
+    finalPictureArray: {
+        url: string;
+        isThumbnail: boolean;
+    }[];
+}
