@@ -14,15 +14,6 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 // Importing Product Json Data
 import products from '@/data/democard.json'
 
-interface SwiperComponent {
-    $$typeof: symbol;
-    render: {
-        (): JSX.Element;
-        displayName: string;
-    };
-}
-
-
 const Page = ({ params }: { params: { product: string } }) => {
 
     const productObject = products.find(product => product.id === params.product)
@@ -39,9 +30,7 @@ const Page = ({ params }: { params: { product: string } }) => {
     // console.log(Swiper);
 
 
-    const [thumbsSwiper, setThumbsSwiper] = useState<Swiper | SwiperComponent | null>(null);
-
-
+    const [thumbsSwiper, setThumbsSwiper] = useState<any | null>(null);
 
 
     return (
@@ -53,6 +42,7 @@ const Page = ({ params }: { params: { product: string } }) => {
                         loop={true}
                         spaceBetween={10}
                         navigation={true}
+                        // thumbs={{ swiper: thumbsSwiper }}
                         thumbs={{ swiper: thumbsSwiper }}
                         modules={[FreeMode, Navigation, Thumbs]}
                         className="mySwiper2"
