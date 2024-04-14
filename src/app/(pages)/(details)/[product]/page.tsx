@@ -1,7 +1,6 @@
-import ProductPictures from '@/components/DetailsPage/ProductPictures/ProductPictures';
-// Todo: Remove the client
-// Importing Product Json Data
 import products from '@/data/democard.json'
+import ProductPictures from '@/components/DetailsPage/ProductPictures/ProductPictures'
+import ProductDetails from '@/components/DetailsPage/ProductDetails/ProductDetails';
 
 const Page = ({ params }: { params: { product: string } }) => {
 
@@ -23,12 +22,12 @@ const Page = ({ params }: { params: { product: string } }) => {
 
 
     return (
-        <div className='max-w-[1600px] mx-auto mt-[50px]'>
-            <div>
+        <div className='max-w-[1600px] mx-auto mt-[50px] flex justify-between'>
+            <div className='w-1/2'>
                 <ProductPictures finalPictureArray={finalPictureArray}></ProductPictures>
             </div>
-            <div>
-
+            <div className='w-1/2'>
+                <ProductDetails></ProductDetails>
             </div>
         </div>
     )

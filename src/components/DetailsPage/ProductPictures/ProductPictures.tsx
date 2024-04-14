@@ -1,3 +1,4 @@
+"use client"
 import React, { useState } from 'react';
 import Image from 'next/image';
 // Import Swiper React components
@@ -14,13 +15,6 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import { ProductPicturesProps } from '@/types/product';
 
 
-
-// interface ProductPicturesProps {
-//     finalPictureArray: {
-//         url: string;
-//         isThumbnail: boolean;
-//     }[];
-// }
 
 const ProductPictures = ({ finalPictureArray }: ProductPicturesProps) => {
     const [thumbsSwiper, setThumbsSwiper] = useState<any | null>(null);
