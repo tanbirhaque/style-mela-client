@@ -45,7 +45,7 @@ const ProductDetails = () => {
                 <p className='text-[#333] mb-4 max-w-[430px]'>This NoiseStorm font is inspired by Classic Retro and Vintage apparel, headlines, signage, logo, quote, apparel and other creative applications.</p>
             </div>
             {/* Add to cart */}
-            <div>
+            <div className='flex gap-3'>
                 {/* Cart value */}
                 <div>
                     <form className="max-w-xs">
@@ -89,7 +89,7 @@ const ProductDetails = () => {
                 </div>
                 {/* Submit Btn */}
                 <div>
-                    <CircleFillHoverBtn></CircleFillHoverBtn>
+                    <CircleFillHoverBtn btnText={'Add To Cart'}></CircleFillHoverBtn>
                 </div>
             </div>
         </div>
