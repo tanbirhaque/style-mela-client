@@ -13,16 +13,26 @@ import './style.css'
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import { ProductPicturesProps } from '@/types/product';
+import ImageMagnifier from './MagnifyComponent/MagnifyComponent';
 
 
 
 const ProductPictures = ({ finalPictureArray }: ProductPicturesProps) => {
     const [thumbsSwiper, setThumbsSwiper] = useState<any | null>(null);
+    const [theURL, setTheURL] = useState('')
+
+    const [[x, y], setXY] = useState([0, 0]);
+    const [[imgWidth, imgHeight], setSize] = useState([0, 0]);
+    const [showMagnifier, setShowMagnifier] = useState(false);
+
+    const handleSetURL = (url: string) => {
+        setTheURL(url);
+    }
 
     return (
         <div>
             {/* Main Product Images */}
-            <div className='w-[765px] h-[765px]'>
+            <div className='w-[765px] h-[765px] relative'>
                 <Swiper
                     loop={true}
                     spaceBetween={10}
@@ -36,11 +46,43 @@ const ProductPictures = ({ finalPictureArray }: ProductPicturesProps) => {
                         finalPictureArray?.map(item => (
                             <div key={item.url}>
                                 <SwiperSlide>
-                                    <Image
+                                    {/* <ImageMagnifier src={item.url} ></ImageMagnifier> */}
+                                    {/* <Image
                                         className='min-w-[765px] min-h-[765px]'
                                         src={item.url}
                                         width={765}
                                         height={765}
+                                        alt='Product Main Images'
+                                    /> */}
+                                    <Image
+                                        className='min-w-[765px] min-h-[765px]'
+                                        src={item.url}
+                                        // onTouchMove={handleSetURL(item.url)}
+                                        width={765}
+                                        height={765}
+                                        style={{ height: 765, width: 765 }}
+                                        onMouseEnter={(e) => {
+                                            // update image size and turn-on magnifier
+                                            const elem = e.currentTarget;
+                                            const { width, height } = elem.getBoundingClientRect();
+                                            setSize([width, height]);
+                                            setShowMagnifier(true);
+                                            setTheURL(item.url);   
+                                        }}
+                                        onMouseMove={(e) => {
+                                            // update cursor position
+                                            const elem = e.currentTarget;
+                                            const { top, left } = elem.getBoundingClientRect();
+
+                                            // calculate cursor position on the image
+                                            const x = e.pageX - left - window.pageXOffset;
+                                            const y = e.pageY - top - window.pageYOffset;
+                                            setXY([x, y]);
+                                        }}
+                                        onMouseLeave={() => {
+                                            // close magnifier
+                                            setShowMagnifier(false);
+                                        }}
                                         alt='Product Main Images'
                                     />
                                 </SwiperSlide>
@@ -48,6 +90,26 @@ const ProductPictures = ({ finalPictureArray }: ProductPicturesProps) => {
                         ))
                     }
                 </Swiper>
+                {/* Magnify Image div */}
+                <div
+                    className="absolute top-0 -right-[600px] w-[600px] h-[400px] z-[9999999]"
+                    style={{
+                        display: showMagnifier ? "" : "none",
+                        pointerEvents: "none",
+                        border: "1px solid lightgray",
+                        backgroundColor: "white",
+                        backgroundImage: `url('${theURL}')`,
+                        backgroundRepeat: "no-repeat",
+
+                        //calculate zoomed image size
+                        backgroundSize: `${imgWidth * 2}px ${imgHeight * 2
+                            }px`,
+
+                        //calculate position of zoomed image.
+                        backgroundPositionX: `${-x * 2 + 735 / 2}px`,
+                        backgroundPositionY: `${-y * 2 + 735 / 2}px`
+                    }}
+                ></div>
             </div>
             {/* Preview Images */}
             <div className='w-[765px] h-[132px]'>

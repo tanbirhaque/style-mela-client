@@ -27,7 +27,7 @@ const ProductDetails = () => {
         setQuantity(decrement)
     }
 
-    
+
     return (
         <div className='pl-[72px] mt-[92px]'>
             <div className='flex gap-3 mb-[10px]'>
