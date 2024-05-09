@@ -8,6 +8,7 @@ import CircleFillHoverBtn from '@/components/shared/Buttons/CircleFillHoverBtn/C
 import { PiHeartLight } from "react-icons/pi";
 import { PiShareNetworkLight } from "react-icons/pi";
 
+// Comment for commit
 // TODO: have to implement exact category
 const ProductDetails = ({ productID }) => {
     const [quantity, setQuantity] = useState(0)
