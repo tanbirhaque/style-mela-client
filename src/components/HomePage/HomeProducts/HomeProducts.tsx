@@ -41,7 +41,7 @@ const HomeProducts = () => {
                 <h2>Just For You</h2>
             </div>
             <div className='flex flex-wrap gap-[30px]'>
-                {products.map((product) => (
+                {products.map((product: any) => (
                     <div key={product._id}>
                         <ProductCard product={product}></ProductCard>
                     </div>

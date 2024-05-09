@@ -17,7 +17,7 @@ import ImageMagnifier from './MagnifyComponent/MagnifyComponent';
 
 
 
-const ProductPictures = ({ productID }) => {
+const ProductPictures = ({ productID }: any) => {
     const [images, setImages] = useState([]);
     console.log(images);
     console.log(productID);
@@ -66,17 +66,9 @@ const ProductPictures = ({ productID }) => {
                     className="mySwiper2"
                 >
                     {
-                        images?.map((item, index) => (
+                        images?.map((item:any, index) => (
                             <div key={index}>
                                 <SwiperSlide>
-                                    {/* <ImageMagnifier src={item.url} ></ImageMagnifier>
-                                    <Image
-                                        className='min-w-[765px] min-h-[765px]'
-                                        src={item.url}
-                                        width={765}
-                                        height={765}
-                                        alt='Product Main Images'
-                                    /> */}
                                     <Image
                                         className='min-w-[765px] min-h-[765px]'
                                         src={item.url}
@@ -148,7 +140,7 @@ const ProductPictures = ({ productID }) => {
                     className="mySwiper prevSlide mt-[10px]"
                 >
                     {
-                        images?.map((item, index) => (
+                        images?.map((item:any, index) => (
                             <div key={index}>
                                 <SwiperSlide>
                                     <Image

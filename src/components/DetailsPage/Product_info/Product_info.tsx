@@ -5,7 +5,7 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import './Product_info_tab.css'
 import Markdown from 'react-markdown'
 
-const Product_info = ({ productID }) => {
+const Product_info = ({ productID }: any) => {
     const [description, setDescription] = useState()
     useEffect(() => {
         const fetchData = async () => {

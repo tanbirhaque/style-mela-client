@@ -10,10 +10,11 @@ import { PiShareNetworkLight } from "react-icons/pi";
 
 // Comment for commit
 // TODO: have to implement exact category
-const ProductDetails = ({ productID }) => {
+const ProductDetails = ({ productID }: any) => {
     const [quantity, setQuantity] = useState(0)
 
     const [productInfo, setProductInfo] = useState()
+    const { title, price, shortDescription }: any = productInfo || {}
     console.log(productInfo);
     useEffect(() => {
         const fetchData = async () => {
@@ -65,11 +66,11 @@ const ProductDetails = ({ productID }) => {
             </div>
             <div>
                 {/* Title */}
-                <h2 className='text-[30px] font-extrabold font-jost mb-5'>{productInfo?.title}</h2>
+                <h2 className='text-[30px] font-extrabold font-jost mb-5'>{title}</h2>
                 {/* Price */}
-                <h3 className='text-4xl font-bold text-[#3d3d3d] mb-4'>${productInfo?.price}</h3>
+                <h3 className='text-4xl font-bold text-[#3d3d3d] mb-4'>${price}</h3>
                 {/* Short Description */}
-                <p className='text-[#333] mb-4 max-w-[430px] text-[16px]'>{productInfo?.shortDescription}</p>
+                <p className='text-[#333] mb-4 max-w-[430px] text-[16px]'>{shortDescription}</p>
             </div>
             {/* Add to cart */}
             <div className='flex gap-3 mt-[40px]'>

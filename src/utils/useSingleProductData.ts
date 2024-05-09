@@ -1,11 +1,11 @@
 "use client";
 import { useState, useEffect } from "react";
 
-export const useSingleProductData = (productID) => {
+export const useSingleProductData = (productID: any) => {
   //   const [description, setDescription] = useState(null);
   const [productData, setProductData] = useState(null);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
+  const [error, setError]:any = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {

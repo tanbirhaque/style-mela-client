@@ -8,8 +8,8 @@ import React from 'react';
 //     product: Product;
 // }
 
-const ProductCard  = ({ product }) => {
-    const getThumbnailImageObject = product?.images?.find(thumbnail => thumbnail?.thumbnail)
+const ProductCard  = ({ product }: any) => {
+    const getThumbnailImageObject = product?.images?.find((thumbnail:any) => thumbnail?.thumbnail)
     const Thumbnail_URL = getThumbnailImageObject?.url
     // console.log(Thumbnail_URL);
     console.log(product);
