@@ -4,20 +4,22 @@ import Link from 'next/link';
 import React from 'react';
 
 
-interface ProductCardProps {
-    product: Product;
-}
+// interface ProductCardProps {
+//     product: Product;
+// }
 
-const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
-    const thumIMG = product.pictures.find(thumImg => thumImg?.isThumbnail)
-    // console.log(product.id);
+const ProductCard  = ({ product }) => {
+    const getThumbnailImageObject = product?.images?.find(thumbnail => thumbnail?.thumbnail)
+    const Thumbnail_URL = getThumbnailImageObject?.url
+    // console.log(Thumbnail_URL);
+    console.log(product);
 
     return (
-        <Link href={`/${product?.id}`}>
+        <Link href={`/${product?._id}`}>
             <div className='w-[377px] group'>
                 <div className=''>
                     <Image
-                        src={`${thumIMG?.url ?? null}`}
+                        src={`${Thumbnail_URL ?? null}`}
                         alt=""
                         width={377}
                         height={377}

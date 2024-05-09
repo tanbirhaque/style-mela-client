@@ -1,5 +1,5 @@
 "use client"
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -12,12 +12,35 @@ import 'swiper/css/thumbs';
 import './style.css'
 // import required modules
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
-import { ProductPicturesProps } from '@/types/product';
+// import { ProductPicturesProps } from '@/types/product';
 import ImageMagnifier from './MagnifyComponent/MagnifyComponent';
 
 
 
-const ProductPictures = ({ finalPictureArray }: ProductPicturesProps) => {
+const ProductPictures = ({ productID }) => {
+    const [images, setImages] = useState([]);
+    console.log(images);
+    console.log(productID);
+    useEffect(() => {
+        const fetchData = async () => {
+            try {
+                const res = await fetch(`http://localhost:5000/single-product/${productID}`, {
+                    method: "GET"
+                })
+                if (!res.ok) {
+                    throw new Error('Network response was not ok');
+                }
+
+                const data = await res.json();
+                setImages(data.images);
+            } catch (error) {
+                console.error('There was a problem fetching the data:', error);
+            }
+        }
+
+        fetchData()
+    }, [productID])
+
     const [thumbsSwiper, setThumbsSwiper] = useState<any | null>(null);
     const [theURL, setTheURL] = useState('')
 
@@ -43,11 +66,11 @@ const ProductPictures = ({ finalPictureArray }: ProductPicturesProps) => {
                     className="mySwiper2"
                 >
                     {
-                        finalPictureArray?.map(item => (
-                            <div key={item.url}>
+                        images?.map((item, index) => (
+                            <div key={index}>
                                 <SwiperSlide>
-                                    {/* <ImageMagnifier src={item.url} ></ImageMagnifier> */}
-                                    {/* <Image
+                                    {/* <ImageMagnifier src={item.url} ></ImageMagnifier>
+                                    <Image
                                         className='min-w-[765px] min-h-[765px]'
                                         src={item.url}
                                         width={765}
@@ -67,7 +90,7 @@ const ProductPictures = ({ finalPictureArray }: ProductPicturesProps) => {
                                             const { width, height } = elem.getBoundingClientRect();
                                             setSize([width, height]);
                                             setShowMagnifier(true);
-                                            setTheURL(item.url);   
+                                            setTheURL(item.url);
                                         }}
                                         onMouseMove={(e) => {
                                             // update cursor position
@@ -125,8 +148,8 @@ const ProductPictures = ({ finalPictureArray }: ProductPicturesProps) => {
                     className="mySwiper prevSlide mt-[10px]"
                 >
                     {
-                        finalPictureArray?.map(item => (
-                            <div key={item.url}>
+                        images?.map((item, index) => (
+                            <div key={index}>
                                 <SwiperSlide>
                                     <Image
                                         className='max-w-[117px] max-h-[117px] rounded-[10px]'
