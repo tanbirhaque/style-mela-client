@@ -8,10 +8,10 @@ import React from 'react';
 //     product: Product;
 // }
 
-const ProductCard  = ({ product }: any) => {
-    const getThumbnailImageObject = product?.images?.find((thumbnail:any) => thumbnail?.thumbnail)
-    const Thumbnail_URL = getThumbnailImageObject?.url
-    // console.log(Thumbnail_URL);
+const ProductCard = ({ product }: any) => {
+    const getThumbnailImageObject = product?.images?.find((thumbnail: any) => thumbnail?.thumbnail)
+    const Thumbnail_URL: any = getThumbnailImageObject?.url
+    console.log(Thumbnail_URL);
     console.log(product);
 
     return (
@@ -19,7 +19,7 @@ const ProductCard  = ({ product }: any) => {
             <div className='w-[377px] group'>
                 <div className=''>
                     <Image
-                        src={`${Thumbnail_URL ?? null}`}
+                        src={`${Thumbnail_URL !== undefined ? Thumbnail_URL : 'https://www.britax-romer.co.uk/on/demandware.static/Sites-Britax-UK-Site/-/default/dw71f81a13/images/britax/PlaceholderProductImage.jpg'}`}
                         alt=""
                         width={377}
                         height={377}
