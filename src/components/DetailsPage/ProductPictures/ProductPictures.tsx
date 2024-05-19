@@ -19,8 +19,8 @@ import ImageMagnifier from './MagnifyComponent/MagnifyComponent';
 
 const ProductPictures = ({ productID }: any) => {
     const [images, setImages] = useState([]);
-    console.log(images);
-    console.log(productID);
+    // console.log(images);
+    // console.log(productID);
     useEffect(() => {
         const fetchData = async () => {
             try {

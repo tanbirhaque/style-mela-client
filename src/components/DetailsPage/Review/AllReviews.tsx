@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import ReviewData from "./ReviewData";
 
-const AllReviews = () => {
+const AllReviews = ({ productID }: any) => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
@@ -9,19 +9,22 @@ const AllReviews = () => {
       .then((res) => res.json())
       .then((data) => setReviews(data));
   }, []);
+
+  //filtering reviews
+  const filteredReviews = reviews.filter(
+    (review: any) => review.productID === productID
+  );
+
   return (
-    <div className=" flex flex-col gap-5 my-10">
-      <h1 className=" text-3xl font-semibold font-jost px-20 py-5">
-        3 Reviews For this product
+    <div className="flex flex-col gap-5 my-10 px-20 py-5">
+      <h1 className="text-3xl font-semibold font-jost">
+        {filteredReviews.length} Reviews For this product
       </h1>
-      {reviews.map((review: any) => (
-        <div key={review._id}>
-          {/* <h1 className=" text-3xl font-semibold font-jost">
-            {review.length} Reviews For Aqua Globes
-          </h1> */}
-          <ReviewData review={review} />
-        </div>
-      ))}
+      <div className="flex flex-col gap-5 my-10">
+        {filteredReviews.map((review: any) => (
+          <ReviewData review={review} key={review._id} />
+        ))}
+      </div>
     </div>
   );
 };

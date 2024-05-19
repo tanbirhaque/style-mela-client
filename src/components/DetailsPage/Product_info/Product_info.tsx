@@ -4,7 +4,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 // import 'react-tabs/style/react-tabs.css';
 import "./Product_info_tab.css";
 import Markdown from "react-markdown";
-import Review from "../Review/Review";
+import AddReview from "../Review/AddReview";
 
 const Product_info = ({ productID }: any) => {
   const [description, setDescription] = useState();
@@ -31,7 +31,7 @@ const Product_info = ({ productID }: any) => {
     fetchData();
   }, [productID]);
 
-  console.log(description);
+  // console.log(description);
 
   return (
     <div>
@@ -63,8 +63,7 @@ const Product_info = ({ productID }: any) => {
               </TabPanel>
               {/* Reviews here */}
               <TabPanel>
-                {/* <h2>Any content 2</h2> */}
-                <Review />
+                <AddReview productID={productID} />
               </TabPanel>
             </div>
           </div>

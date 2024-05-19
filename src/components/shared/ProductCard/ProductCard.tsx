@@ -11,8 +11,8 @@ import React from 'react';
 const ProductCard = ({ product }: any) => {
     const getThumbnailImageObject = product?.images?.find((thumbnail: any) => thumbnail?.thumbnail)
     const Thumbnail_URL: any = getThumbnailImageObject?.url
-    console.log(Thumbnail_URL);
-    console.log(product);
+    // console.log(Thumbnail_URL);
+    // console.log(product);
 
     return (
         <Link href={`/${product?._id}`}>

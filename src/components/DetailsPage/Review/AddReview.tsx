@@ -3,14 +3,18 @@ import useAxiosPublic from "@/hooks/useAxiosPublic";
 import { SubmitHandler, useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import AllReviews from "./AllReviews";
-
+// TODO: rating feature needs to be added
+// TODO: user data needs to be dynamic
 type Inputs = {
+  productID: string;
   name: string;
   email: string;
   message: string;
   date: any;
 };
-const Review = () => {
+
+const AddReview = ({ productID }: any) => {
+  // console.log(productID);
   const axiosPublic = useAxiosPublic();
   const {
     register,
@@ -21,6 +25,7 @@ const Review = () => {
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = (data) => {
     const review = {
+      productID: productID,
       reviewText: data.message,
       reviewerName: data.name,
       reviewerEmail: data.email,
@@ -28,7 +33,7 @@ const Review = () => {
       date: new Date().toLocaleDateString("en-GB"),
     };
     axiosPublic.post("/addReview", { review }).then((response) => {
-      console.log(response, "response");
+      // console.log(response, "response");
       Swal.fire({
         title: `Thanks for your valuable review`,
         timer: 2000,
@@ -38,7 +43,7 @@ const Review = () => {
       });
       reset();
     });
-    console.log(review);
+    // console.log(review);
   };
   return (
     <div>
@@ -78,9 +83,9 @@ const Review = () => {
           />
         </div>
       </form>
-      <AllReviews />
+      <AllReviews productID={productID} />
     </div>
   );
 };
 
-export default Review;
+export default AddReview;
