@@ -3,7 +3,8 @@ import { Rating } from "@smastrom/react-rating";
 import "@smastrom/react-rating/style.css";
 
 const ReviewData = ({ review }: any) => {
-  const { _id, reviewText, reviewerName, reviewerEmail, date } = review || {};
+  const { _id, reviewText, reviewerName, reviewerEmail, date, reviewRating } =
+    review || {};
   //   console.log(review);
   return (
     <div className="bg-[#FFFFFF] px-20 py-5 rounded-lg">
@@ -21,7 +22,8 @@ const ReviewData = ({ review }: any) => {
             <div className="flex flex-col justify-center text-center">
               <h1 className="text-xl font-semibold">{reviewerName}</h1>
               {/* TODO:needs to be dynamic */}
-              <Rating style={{ maxWidth: 90 }} value={4} />
+              <Rating style={{ maxWidth: 90 }} value={reviewRating} readOnly />
+              {/* <Rating style={{ maxWidth: 90 }} value={4} /> */}
             </div>
           </div>
           {/* date */}
