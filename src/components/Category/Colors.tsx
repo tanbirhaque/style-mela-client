@@ -2,7 +2,7 @@ import React from "react";
 
 const Colors = () => {
   return (
-    <div className="my-5 grid grid-cols-8">
+    <div className="my-5 grid grid-cols-8 gap-10 md:gap-0">
       <span className="bg-[#000000] w-9 h-9 rounded-[10px] mb-3 inline-block">
         B
       </span>
