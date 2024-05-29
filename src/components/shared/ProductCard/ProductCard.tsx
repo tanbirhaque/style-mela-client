@@ -41,11 +41,10 @@ const ProductCard = ({ product }: any) => {
           <div>
             <Link href={`/${product?._id}`}>
               <Image
-                src={`${
-                  Thumbnail_URL !== undefined
-                    ? Thumbnail_URL
-                    : "https://www.britax-romer.co.uk/on/demandware.static/Sites-Britax-UK-Site/-/default/dw71f81a13/images/britax/PlaceholderProductImage.jpg"
-                }`}
+                src={`${Thumbnail_URL !== undefined
+                  ? Thumbnail_URL
+                  : "https://www.britax-romer.co.uk/on/demandware.static/Sites-Britax-UK-Site/-/default/dw71f81a13/images/britax/PlaceholderProductImage.jpg"
+                  }`}
                 alt=""
                 width={377}
                 height={377}
@@ -54,7 +53,7 @@ const ProductCard = ({ product }: any) => {
               />
             </Link>
           </div>
-          <div className="w-fit h-fit p-2 bg-white z-[99999] rounded-lg absolute right-3 bottom-5">
+          <div className="w-fit h-fit p-2 bg-white z-[999] rounded-lg absolute right-3 bottom-5">
             <button className="text-black text-lg">
               <FaRegEye onClick={() => modalTriggerOpen(product)} />
             </button>
@@ -134,11 +133,13 @@ const ProductCard = ({ product }: any) => {
       </div>
       {/* </Link> */}
       {/* modal div */}
-      <Modal
-        modal={modal}
-        onClose={modalTriggerClose}
-        modalContent={modalContent}
-      />
+      <div className="z-[99999] bg-green-200">
+        <Modal
+          modal={modal}
+          onClose={modalTriggerClose}
+          modalContent={modalContent}
+        />
+      </div>
     </>
   );
 };
