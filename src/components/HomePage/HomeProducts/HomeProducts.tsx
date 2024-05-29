@@ -30,18 +30,17 @@ const HomeProducts = () => {
     fetchData();
   }, []);
 
-  // console.log(products);
+  console.log(products);
 
   return (
     <div className="max-w-[1600px]">
-      <div>
-        <h2>Just For You</h2>
+      <div className="text-center py-12">
+        <h2 className="font-jost font-extrabold text-[30px] uppercase pb-2">Just For You</h2>
+        <p className="font-jost">Sitewide Discounts & Savings Of Up To 25%</p>
       </div>
-      <div className="flex flex-wrap gap-[30px]">
+      <div className="flex flex-wrap gap-[30.5px] justify-center">
         {products.map((product: any) => (
-          <div key={product._id}>
-            <ProductCard product={product}></ProductCard>
-          </div>
+          <ProductCard key={product._id} product={product}></ProductCard>
         ))}
       </div>
     </div>
