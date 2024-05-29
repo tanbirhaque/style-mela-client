@@ -3,9 +3,7 @@ import useAxiosPublic from "@/hooks/useAxiosPublic";
 import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import AllReviews from "./AllReviews";
-import { useState } from "react";
 import { Rating } from "@smastrom/react-rating";
-// TODO: rating feature needs to be added
 // TODO: user data needs to be dynamic
 type Inputs = {
   productID: string;
@@ -13,7 +11,7 @@ type Inputs = {
   email: string;
   message: string;
   date: string;
-  rating: string;
+  rating: any;
 };
 
 const AddReview = ({ productID }: any) => {
@@ -99,7 +97,7 @@ const AddReview = ({ productID }: any) => {
         <div className="flex justify-end">
           <input
             type="submit"
-            className="focus:outline-none text-white bg-[#FA8C16] font-medium rounded-lg text-xl px-12 py-4 mb-4 "
+            className="focus:outline-none text-white bg-[#FA8C16] font-medium rounded-lg text-xl px-12 py-4 mb-4 cursor-pointer"
           />
         </div>
       </form>
