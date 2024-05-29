@@ -5,6 +5,7 @@ import React, { useState } from "react";
 
 import { FaRegEye } from "react-icons/fa6";
 import Modal from "./Modal";
+import { PiEyeThin } from "react-icons/pi";
 
 // interface ProductCardProps {
 //     product: Product;
@@ -53,9 +54,9 @@ const ProductCard = ({ product }: any) => {
               />
             </Link>
           </div>
-          <div className="w-fit h-fit p-2 bg-white z-[999] rounded-lg absolute right-3 bottom-5">
-            <button className="text-black text-lg">
-              <FaRegEye onClick={() => modalTriggerOpen(product)} />
+          <div className="z-[999] absolute right-4 bottom-4 flex opacity-0 group-hover:opacity-100">
+            <button className="text-black text-md w-fit max-h-fit bg-white p-[6px] rounded-md" onClick={() => modalTriggerOpen(product)} >
+              <PiEyeThin />
             </button>
           </div>
         </div>
