@@ -15,7 +15,7 @@ const ProductDetails = ({ productID }: any) => {
 
     const [productInfo, setProductInfo] = useState()
     const { title, price, shortDescription }: any = productInfo || {}
-    console.log(productInfo);
+    // console.log(productInfo);
     useEffect(() => {
         const fetchData = async () => {
             try {

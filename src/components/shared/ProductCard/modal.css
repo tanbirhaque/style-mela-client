@@ -1,0 +1,27 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+  /* width: 100%;s */
+}
+
+.modal-content {
+  /* background-color: #fff; */
+  /* position: fixed; */
+  top: calc((100%-570px) / 2);
+  /* height: 570px; */
+  /* width: 0px; */
+  max-width: 1020px;
+  /* overflow: hidden; */
+  /* transition: all 1s cubic-bezier(0.77, 0, 0.175, 1), background 1ms; */
+  /* will-change: transform; */
+  /* border: none; */
+}
+

@@ -1,0 +1,8 @@
+/* Target the first child */
+.slider-thumb-container div:first-child div {
+    background-color: black;
+}
+
+.slider-thumb-container div:last-child div {
+    background-color: #fa8c16;
+}
