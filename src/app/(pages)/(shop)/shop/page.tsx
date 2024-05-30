@@ -3,9 +3,11 @@
 import Category from "@/components/Category/Category";
 import Cover from "@/components/shared/Cover/Cover";
 import ProductCard from "@/components/shared/ProductCard/ProductCard";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const Page = () => {
+  const [dropOpen, setDropOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement | null>(null)
   //fetching all products
   const [products, setProducts] = useState([]);
   useEffect(() => {
@@ -29,6 +31,28 @@ const Page = () => {
     fetchData();
   }, []);
 
+  const handleDropOpen = () => {
+    setDropOpen(!dropOpen);
+  };
+
+  const handleClickOutside = (event: MouseEvent) => {
+    if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+      setDropOpen(false);
+    }
+  };
+
+  useEffect(() => {
+    if (dropOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropOpen]);
+
   return (
     <>
       <Cover heading={"shop"} route={"shop"} />
@@ -41,12 +65,12 @@ const Page = () => {
             <h1 className="text-3xl font-extrabold mb-10">Featured Product</h1>
 
             {/* dropdown */}
-            <div className="pr-9">
+            <div className="relative h-fit" ref={dropdownRef}>
               <button
-                id="dropdownDefaultButton"
-                data-dropdown-toggle="dropdown"
-                className="text-white bg-black font-medium rounded-lg px-5 py-2.5 text-center inline-flex items-center"
+                // id="dropdownDefaultButton"
+                className={`text-white bg-black font-medium rounded-t-lg ${dropOpen ? '' : 'rounded-b-lg'} px-5 py-2.5 text-center inline-flex items-center transition-all ease-linear duration-500`}
                 type="button"
+                onClick={handleDropOpen}
               >
                 Sort By: Default{" "}
                 <svg
@@ -65,65 +89,58 @@ const Page = () => {
                   />
                 </svg>
               </button>
-            </div>
-            <div
-              id="dropdown"
-              className="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44 dark:bg-gray-700"
-            >
-              <div className="py-2" aria-labelledby="dropdownDefaultButton">
-                <div className="flex justify-around">
-                  <label className="ms-2 mr-5 hover:font-semibold">
-                    Popularity
+
+              <div className={`bg-white absolute ${dropOpen ? 'top-full opacity-100' : 'top-20 opacity-0'} transition-all ease-linear duration-500 w-full z-[999] rounded-b-lg shadow-lg`}>
+                <div className="p-5 grid gap-2">
+                  <label className="flex flex-row-reverse items-center justify-between">
+                    <input
+                      type="checkbox"
+                      className="peer w-[20px] h-[20px] text-[#fa8c16] border border-gray-300 rounded checked:bg-[#fa8c16] checked:border-none appearance-none"
+                    />
+                    <p className="peer-checked:font-bold">Default</p>
                   </label>
-                  <input
-                    type="checkbox"
-                    className="w-4 h-4 text-[#fa8c16] bg-gray-100 border-gray-300 rounded focus:ring-[#fa8c16]"
-                  />
-                </div>
-                <div className="flex justify-around">
-                  <label className="ms-2 mr-5 hover:font-semibold">
-                    Rating
+                  <label className="flex flex-row-reverse items-center justify-between">
+                    <input
+                      type="checkbox"
+                      className="peer w-[20px] h-[20px] text-[#fa8c16] border border-gray-300 rounded checked:bg-[#fa8c16] checked:border-none appearance-none"
+                    />
+                    <p className="peer-checked:font-bold">Popularity</p>
                   </label>
-                  <input
-                    type="checkbox"
-                    className="w-4 h-4 text-[#fa8c16] bg-gray-100 border-gray-300 rounded focus:ring-[#fa8c16]"
-                  />
-                </div>
-                <div className="flex justify-around">
-                  <label className="ms-2 mr-5 hover:font-semibold">
-                    Newest
+                  <label className="flex flex-row-reverse items-center justify-between">
+                    <input
+                      type="checkbox"
+                      className="peer w-[20px] h-[20px] text-[#fa8c16] border border-gray-300 rounded checked:bg-[#fa8c16] checked:border-none appearance-none"
+                    />
+                    <p className="peer-checked:font-bold">Rating</p>
                   </label>
-                  <input
-                    type="checkbox"
-                    className="w-4 h-4 text-[#fa8c16] bg-gray-100 border-gray-300 rounded focus:ring-[#fa8c16]"
-                  />
-                </div>
-                <div className="flex justify-around">
-                  <label className="ms-2 mr-5 hover:font-semibold">
-                    Oldest
+                  <label className="flex flex-row-reverse items-center justify-between">
+                    <input
+                      type="checkbox"
+                      className="peer w-[20px] h-[20px] text-[#fa8c16] border border-gray-300 rounded checked:bg-[#fa8c16] checked:border-none appearance-none"
+                    />
+                    <p className="peer-checked:font-bold">Newest</p>
                   </label>
-                  <input
-                    type="checkbox"
-                    className="w-4 h-4 text-[#fa8c16] bg-gray-100 border-gray-300 rounded focus:ring-[#fa8c16]"
-                  />
-                </div>
-                <div className="flex justify-around">
-                  <label className="ms-2 mr-5 hover:font-semibold">
-                    Low Price
+                  <label className="flex flex-row-reverse items-center justify-between">
+                    <input
+                      type="checkbox"
+                      className="peer w-[20px] h-[20px] text-[#fa8c16] border border-gray-300 rounded checked:bg-[#fa8c16] checked:border-none appearance-none"
+                    />
+                    <p className="peer-checked:font-bold">Oldest</p>
                   </label>
-                  <input
-                    type="checkbox"
-                    className="w-4 h-4 text-[#fa8c16] bg-gray-100 border-gray-300 rounded focus:ring-[#fa8c16]"
-                  />
-                </div>
-                <div className="flex justify-around">
-                  <label className="ms-2 mr-5 hover:font-semibold">
-                    High Price
+                  <label className="flex flex-row-reverse items-center justify-between">
+                    <input
+                      type="checkbox"
+                      className="peer w-[20px] h-[20px] text-[#fa8c16] border border-gray-300 rounded checked:bg-[#fa8c16] checked:border-none appearance-none"
+                    />
+                    <p className="peer-checked:font-bold">Low Price</p>
                   </label>
-                  <input
-                    type="checkbox"
-                    className="w-4 h-4 text-[#fa8c16] bg-gray-100 border-gray-300 rounded focus:ring-[#fa8c16]"
-                  />
+                  <label className="flex flex-row-reverse items-center justify-between">
+                    <input
+                      type="checkbox"
+                      className="peer w-[20px] h-[20px] text-[#fa8c16] border border-gray-300 rounded checked:bg-[#fa8c16] checked:border-none appearance-none"
+                    />
+                    <p className="peer-checked:font-bold">High Price</p>
+                  </label>
                 </div>
               </div>
             </div>
@@ -137,7 +154,7 @@ const Page = () => {
             ))}
           </div>
         </div>
-      </div>
+      </div >
     </>
   );
 };

@@ -107,7 +107,7 @@ const Category = () => {
       <PriceSlider />
       {/* filter */}
       <button
-        className="bg-[#fa8c16] text-[#ffffff] hover:bg-black w-full text-center rounded-[27px] font-semibold pt-5 pb-4 px-9"
+        className="bg-[#fa8c16] text-[#ffffff] hover:bg-black w-full text-center rounded-[27px] font-semibold py-3 px-9"
       // style={{ padding: "20px 35px 17px" }}
       >
         Filter

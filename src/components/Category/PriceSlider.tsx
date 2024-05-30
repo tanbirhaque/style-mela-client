@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Range, getTrackBackground } from "react-range";
+import "./PriceSlider.css"
 
 const MIN = 0;
 const MAX = 1000;
@@ -18,7 +19,7 @@ const PriceSlider: React.FC = () => {
         renderTrack={({ props, children }) => (
           <div
             {...props}
-            className="h-2 w-full bg-gray-200 rounded-md"
+            className="h-1 w-full bg-gray-200 rounded-md slider-thumb-container"
             style={{
               background: getTrackBackground({
                 values,
@@ -34,9 +35,9 @@ const PriceSlider: React.FC = () => {
         renderThumb={({ props }) => (
           <div
             {...props}
-            className="h-4 w-4 bg-black rounded-full flex justify-center items-center text-white"
+            className="slider-thumb h-3 w-3 rounded-full flex justify-center items-center text-white outline-0"
           >
-            <div className="w-3 h-3 bg-white rounded-full" />
+            <div className="w-[10px] h-[10px] rounded-full outline-0" />
           </div>
         )}
       />
