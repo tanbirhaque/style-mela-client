@@ -40,6 +40,7 @@ const Category = () => {
           </div>
         </label>
       </div>
+      <div className="divider min-w-full h-[1px] bg-gray-200 mb-5"></div>
       {/* type */}
       <h3 className="font-extrabold">Type</h3>
       {/* checkbox div for type */}
@@ -85,6 +86,7 @@ const Category = () => {
           </div>
         </label>
       </div>
+      <div className="divider min-w-full h-[1px] bg-gray-200 mb-5"></div>
       {/* brands */}
       <h3 className="font-extrabold">Brands</h3>
       <div className="my-5 pl-5 pr-10 space-y-2">
@@ -99,9 +101,11 @@ const Category = () => {
           </div>
         </label>
       </div>
+      <div className="divider min-w-full h-[1px] bg-gray-200 mb-5"></div>
       {/* colors */}
       <h3 className="font-extrabold">Colors</h3>
       <Colors />
+      <div className="divider min-w-full h-[1px] bg-gray-200 mb-5"></div>
       {/* price range */}
       <h3 className="font-extrabold">Price Range</h3>
       <PriceSlider />
