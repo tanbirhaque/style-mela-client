@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { IoMdClose } from "react-icons/io";
 import "./modal.css";
 import Image from "next/image";
@@ -7,9 +7,28 @@ import { GoShareAndroid } from "react-icons/go";
 import { Rating } from "@smastrom/react-rating";
 
 const Modal = ({ modal, modalContent, onClose }: any) => {
-  if (modal !== true) {
+  const [isVisible, setIsVisible] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
+
+  useEffect(() => {
+    if (modal) {
+      setIsVisible(true);
+      // Trigger the transition
+      setTimeout(() => setIsTransitioning(true), 10); // Small delay to ensure the transition class is applied after the element becomes visible
+    } else {
+      setIsTransitioning(false);
+      setTimeout(() => setIsVisible(false), 500); // Match the duration of the CSS transition
+    }
+  }, [modal]);
+
+  if (!isVisible) {
     return null;
   }
+  // const [tran, setTran] = useState(true)
+  // if (modal !== true) {
+  //   return null;
+  // }
+  console.log("From modal:", modal);
 
   const { title, price, description, listingCategory } = modalContent || {};
 
@@ -22,19 +41,18 @@ const Modal = ({ modal, modalContent, onClose }: any) => {
 
   return (
     <section className="modal">
-      <div className="modal-content">
-        <div className=" cursor-pointer text-2xl font-bold flex justify-end pr-5 pt-5">
+      <div className={`modal-content fixed ${isTransitioning ? 'w-full' : 'w-0'} max-h-[570px] bg-white transition-all ease-linear duration-500 overflow-x-hidden p-8`}>
+        <div className="cursor-pointer text-2xl font-bold absolute right-6 top-6">
           <IoMdClose onClick={onClose} />
         </div>
         {/* modal contents */}
-        <div className="flex gap-10 p-3">
-          <div className="bg-[#f5f5f5]">
+        <div className="flex gap-10">
+          <div className="bg-[#f5f5f5] rounded-2xl">
             <Image
-              src={`${
-                Thumbnail_URL !== undefined
-                  ? Thumbnail_URL
-                  : "https://www.britax-romer.co.uk/on/demandware.static/Sites-Britax-UK-Site/-/default/dw71f81a13/images/britax/PlaceholderProductImage.jpg"
-              }`}
+              src={`${Thumbnail_URL !== undefined
+                ? Thumbnail_URL
+                : "https://www.britax-romer.co.uk/on/demandware.static/Sites-Britax-UK-Site/-/default/dw71f81a13/images/britax/PlaceholderProductImage.jpg"
+                }`}
               alt=""
               width={500}
               height={500}
@@ -77,7 +95,7 @@ const Modal = ({ modal, modalContent, onClose }: any) => {
           </div>
         </div>
       </div>
-    </section>
+    </section >
   );
 };
 

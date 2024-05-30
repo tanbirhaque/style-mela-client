@@ -1,5 +1,6 @@
 "use client";
 
+import Category from "@/components/Category/Category";
 import Cover from "@/components/shared/Cover/Cover";
 import ProductCard from "@/components/shared/ProductCard/ProductCard";
 import { useEffect, useState } from "react";
@@ -33,11 +34,12 @@ const Page = () => {
       <Cover heading={"shop"} route={"shop"} />
       <div className="my-10 flex flex-col-reverse md:flex-row gap-5">
         {/* filter div */}
-        <div className="w-1/4 ml-1 md:ml-8">
+        {/* <div className="w-1/4 ml-1 md:ml-8">
           <h3 className="font-extrabold">Category</h3>
-        </div>
+        </div> */}
+        <Category />
         {/* products div */}
-        <div>hu 
+        <div>
           <h1 className="text-3xl font-extrabold mb-10">Featured Product</h1>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
             {products.map((product: any) => (
@@ -53,3 +55,12 @@ const Page = () => {
 };
 
 export default Page;
+
+// Sort By:
+// - Default
+// - Popularity
+// - Rating
+// - Newest
+// - Oldest
+// - Low Price
+// - High Price
