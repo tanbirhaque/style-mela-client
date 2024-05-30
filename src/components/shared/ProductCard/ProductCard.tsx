@@ -54,7 +54,7 @@ const ProductCard = ({ product }: any) => {
               />
             </Link>
           </div>
-          <div className="w-fit h-fit p-2 bg-white z-[99999] rounded-lg absolute right-3 bottom-5">
+          <div className="w-fit h-fit p-2 bg-white z-[99999] rounded-lg absolute right-3 bottom-5 opacity-0 group-hover:opacity-100">
             <button className="text-black text-lg">
               <FaRegEye onClick={() => modalTriggerOpen(product)} />
             </button>
@@ -134,11 +134,13 @@ const ProductCard = ({ product }: any) => {
       </div>
       {/* </Link> */}
       {/* modal div */}
-      <Modal
-        modal={modal}
-        onClose={modalTriggerClose}
-        modalContent={modalContent}
-      />
+      <div className="z-[99999999]">
+        <Modal
+          modal={modal}
+          onClose={modalTriggerClose}
+          modalContent={modalContent}
+        />
+      </div>
     </>
   );
 };

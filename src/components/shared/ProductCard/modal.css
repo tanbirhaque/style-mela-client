@@ -1,13 +1,3 @@
-.header-content {
-  border: 1px solid black;
-  justify-content: space-between;
-}
-.header-text {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 18px;
-  cursor: pointer;
-}
 .modal {
   position: fixed;
   left: 0;
@@ -19,6 +9,7 @@
   align-items: center;
   justify-content: center;
   z-index: 99999;
+  /* width: 100%;s */
 }
 .modal-content {
   /* border: 1px solid #fff; */
@@ -38,9 +29,4 @@
   border: none;
   /* clip-path: inset(0% 100% 0% 0%); */
 }
-.modal-image img {
-  width: 8rem;
-}
-.modalText {
-  text-align: justify;
-}
+

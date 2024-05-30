@@ -4,6 +4,7 @@ import { kumbh, jost } from "./fonts";
 import "./globals.css";
 import NavBar from "@/components/shared/NavBar/NavBar";
 import TopNav from "@/components/shared/TopNav/TopNav";
+import Footer from "@/components/shared/Footer/Footer";
 // import { initFlowbite } from "flowbite";
 
 
@@ -30,6 +31,7 @@ export default function RootLayout({
         <TopNav></TopNav>
         <NavBar></NavBar>
         {children}
+        <Footer/>
       </body>
     </html>
   );
