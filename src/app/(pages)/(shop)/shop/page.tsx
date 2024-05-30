@@ -32,7 +32,7 @@ const Page = () => {
   return (
     <>
       <Cover heading={"shop"} route={"shop"} />
-      <div className="my-10 flex flex-col-reverse md:flex-row gap-5">
+      <div className="max-w-[1600px] mx-auto my-10 flex flex-col-reverse md:flex-row gap-5">
         {/* filter div */}
         <Category />
         {/* products div */}
