@@ -43,10 +43,11 @@ const ProductCard = ({ product }: any) => {
             <div>
               <Link href={`/${product?._id}`}>
                 <Image
-                  src={`${Thumbnail_URL !== undefined
-                    ? Thumbnail_URL
-                    : "https://www.britax-romer.co.uk/on/demandware.static/Sites-Britax-UK-Site/-/default/dw71f81a13/images/britax/PlaceholderProductImage.jpg"
-                    }`}
+                  src={`${
+                    Thumbnail_URL !== undefined
+                      ? Thumbnail_URL
+                      : "https://www.britax-romer.co.uk/on/demandware.static/Sites-Britax-UK-Site/-/default/dw71f81a13/images/britax/PlaceholderProductImage.jpg"
+                  }`}
                   alt=""
                   width={280}
                   height={280}
@@ -56,7 +57,10 @@ const ProductCard = ({ product }: any) => {
               </Link>
             </div>
             <div className="z-[999] absolute right-4 bottom-4 flex opacity-0 group-hover:opacity-100">
-              <button className="text-black text-md w-fit max-h-fit bg-white p-[6px] rounded-md" onClick={() => modalTriggerOpen(product)} >
+              <button
+                className="text-black text-md w-fit max-h-fit bg-white p-[6px] rounded-md"
+                onClick={() => modalTriggerOpen(product)}
+              >
                 <PiEyeThin />
               </button>
             </div>
