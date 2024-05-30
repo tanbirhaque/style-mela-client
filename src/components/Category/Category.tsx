@@ -4,7 +4,7 @@ import Colors from "./Colors";
 
 const Category = () => {
   return (
-    <div className="w-1/4 ml-1 md:ml-8 text-[#000000]">
+    <div className="w-[16%] ml-1 md:ml-8 text-[#000000]">
       {/* category */}
       <h3 className="font-extrabold">Category</h3>
       {/* checkbox div for category */}
@@ -40,7 +40,9 @@ const Category = () => {
           </div>
         </label>
       </div>
-      <div className="divider min-w-full h-[1px] bg-gray-200 mb-5"></div>
+      <div className="pr-5">
+        <div className="divider min-w-full h-[1px] bg-gray-200 mb-5"></div>
+      </div>
       {/* type */}
       <h3 className="font-extrabold">Type</h3>
       {/* checkbox div for type */}
@@ -86,7 +88,9 @@ const Category = () => {
           </div>
         </label>
       </div>
-      <div className="divider min-w-full h-[1px] bg-gray-200 mb-5"></div>
+      <div className="pr-5">
+        <div className="divider min-w-full h-[1px] bg-gray-200 mb-5"></div>
+      </div>
       {/* brands */}
       <h3 className="font-extrabold">Brands</h3>
       <div className="my-5 pl-5 pr-10 space-y-2">
@@ -101,21 +105,29 @@ const Category = () => {
           </div>
         </label>
       </div>
-      <div className="divider min-w-full h-[1px] bg-gray-200 mb-5"></div>
+      <div className="pr-5">
+        <div className="divider min-w-full h-[1px] bg-gray-200 mb-5"></div>
+      </div>
       {/* colors */}
-      <h3 className="font-extrabold">Colors</h3>
+      {/* <h3 className="font-extrabold">Colors</h3>
       <Colors />
-      <div className="divider min-w-full h-[1px] bg-gray-200 mb-5"></div>
+      <div className="pr-5">
+        <div className="divider min-w-full h-[1px] bg-gray-200 mb-5"></div>
+      </div> */}
       {/* price range */}
-      <h3 className="font-extrabold">Price Range</h3>
-      <PriceSlider />
+      <div className="pr-5">
+        <h3 className="font-extrabold">Price Range</h3>
+        <PriceSlider />
+      </div>
       {/* filter */}
-      <button
-        className="bg-[#fa8c16] text-[#ffffff] hover:bg-black w-full text-center rounded-[27px] font-semibold py-3 px-9"
-      // style={{ padding: "20px 35px 17px" }}
-      >
-        Filter
-      </button>
+      <div className="pr-4">
+        <button
+          className="bg-[#fa8c16] text-[#ffffff] hover:bg-black w-full text-center rounded-[27px] font-semibold py-3 px-9"
+        // style={{ padding: "20px 35px 17px" }}
+        >
+          Filter
+        </button>
+      </div>
     </div>
   );
 };

@@ -24,7 +24,7 @@ const NavBar = () => {
                 <div className="max-w-[1600px] flex flex-wrap items-center justify-between mx-auto p-4 2xl:px-0">
                     {/* Navbar Left */}
                     <div className='flex items-center w-2/4'>
-                        <a href="#" className="flex items-center space-x-3 rtl:space-x-reverse">
+                        <a href="/" className="flex items-center space-x-3 rtl:space-x-reverse">
                             <span className="font-jost self-center text-[40px] font-semibold whitespace-nowrap dark:text-white">Style Mela</span>
                         </a>
                         <div className='bg-black dark:bg-white h-[25px] w-[1px] mx-5'></div>

@@ -56,11 +56,11 @@ const Page = () => {
   return (
     <>
       <Cover heading={"shop"} route={"shop"} />
-      <div className="max-w-[1600px] mx-auto my-10 flex flex-col-reverse md:flex-row gap-5">
+      <div className="max-w-[1600px] mx-auto my-10 flex flex-col-reverse md:flex-row gap-5 justify-between">
         {/* filter div */}
         <Category />
         {/* products div */}
-        <div>
+        <div className="flex-grow">
           <div className="flex justify-between">
             <h1 className="text-3xl font-extrabold mb-10">Featured Product</h1>
 
@@ -146,7 +146,7 @@ const Page = () => {
             </div>
             {/*  */}
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
             {products.map((product: any) => (
               <div key={product._id}>
                 <ProductCard product={product} />

@@ -37,22 +37,21 @@ const ProductCard = ({ product }: any) => {
     <>
       <div>
         {/* <Link href={`/${product?._id}`}> */}
-        <div className="max-w-[377px] group">
+        <div className="max-w-[304px] group">
           {/* image div */}
           <div className="relative">
             <div>
               <Link href={`/${product?._id}`}>
                 <Image
-                  src={`${
-                    Thumbnail_URL !== undefined
-                      ? Thumbnail_URL
-                      : "https://www.britax-romer.co.uk/on/demandware.static/Sites-Britax-UK-Site/-/default/dw71f81a13/images/britax/PlaceholderProductImage.jpg"
-                  }`}
+                  src={`${Thumbnail_URL !== undefined
+                    ? Thumbnail_URL
+                    : "https://www.britax-romer.co.uk/on/demandware.static/Sites-Britax-UK-Site/-/default/dw71f81a13/images/britax/PlaceholderProductImage.jpg"
+                    }`}
                   alt=""
                   width={280}
                   height={280}
                   sizes="100vw"
-                  className="rounded-2xl h-[377px] max-w-[377px] md:w-[377px] group-hover:shadow-[rgba(0,_0,_0,_0.25)_0px_15px_40px_-12px] transition-all duration-200 ease-in-out relative"
+                  className="rounded-2xl h-[304px] max-w-[304px] md:w-[304px] group-hover:shadow-[rgba(0,_0,_0,_0.25)_0px_15px_40px_-12px] transition-all duration-200 ease-in-out relative"
                 />
               </Link>
             </div>

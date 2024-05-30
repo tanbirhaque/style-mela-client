@@ -46,7 +46,7 @@ const Product_info = ({ productID }: any) => {
             <Tab className={"text-white py-5 px-5 cursor-pointer"}>Reviews</Tab>
           </TabList>
 
-          <div className="bg-[#f5f5f5]">
+          <div className="bg-[#f5f5f5]  rounded-b-[20px] ">
             <div className="max-w-[1200px] mx-auto py-[60px]">
               {/* Description here */}
               <TabPanel>

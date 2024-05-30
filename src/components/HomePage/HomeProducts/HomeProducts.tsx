@@ -38,9 +38,13 @@ const HomeProducts = () => {
         <h2 className="font-jost font-extrabold text-[30px] uppercase pb-2">Just For You</h2>
         <p className="font-jost">Sitewide Discounts & Savings Of Up To 25%</p>
       </div>
-      <div className="flex flex-wrap gap-[30.5px] justify-center">
+      {/* <div className="flex flex-wrap gap-[30.5px] justify-center"> */}
+      <div className="flex flex-wrap gap-x-5 gap-y-8">
         {products.map((product: any) => (
-          <ProductCard key={product._id} product={product}></ProductCard>
+          <>
+            <ProductCard key={product._id} product={product}></ProductCard>
+            <ProductCard key={product._id} product={product}></ProductCard>
+          </>
         ))}
       </div>
     </div>
