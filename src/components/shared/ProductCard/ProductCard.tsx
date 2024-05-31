@@ -52,7 +52,7 @@ const ProductCard = ({ product }: any) => {
   };
 
   const result = calculateTotalPrice(product);
-  console.log(result.discountedPrice);
+  // console.log(result.discountedPrice);
 
   return (
     <>
