@@ -12,6 +12,8 @@ import { PiEyeThin } from "react-icons/pi";
 // }
 
 const ProductCard = ({ product }: any) => {
+  const { _id, images, price, discount } = product || {};
+
   const getThumbnailImageObject = product?.images?.find(
     (thumbnail: any) => thumbnail?.thumbnail
   );
@@ -33,6 +35,20 @@ const ProductCard = ({ product }: any) => {
     setModal(false);
   };
 
+  // Function to calculate total percentage after discount
+  const calculateTotalPrice = ({ price, discount }: any) => {
+    let discountedAmount = price * (discount / 100);
+
+    let discountedPrice = price - discountedAmount;
+
+    return {
+      discountedPrice: discountedPrice,
+    };
+  };
+
+  const result = calculateTotalPrice(product);
+  console.log(result.discountedPrice);
+
   return (
     <>
       <div>
@@ -53,6 +69,14 @@ const ProductCard = ({ product }: any) => {
                   sizes="100vw"
                   className="rounded-2xl h-[304px] max-w-[304px] md:w-[304px] group-hover:shadow-[rgba(0,_0,_0,_0.25)_0px_15px_40px_-12px] transition-all duration-200 ease-in-out relative"
                 />
+                {/* sale label */}
+                {discount > 0 ? (
+                  <div className="absolute top-4 left-5 bg-[#fa8c16] text-white rounded-md py-1 px-2.5">
+                    Sale
+                  </div>
+                ) : (
+                  <></>
+                )}
               </Link>
             </div>
             <div className="z-[999] absolute right-4 bottom-4 flex opacity-0 group-hover:opacity-100">
@@ -121,9 +145,18 @@ const ProductCard = ({ product }: any) => {
                   </div>
                   {/* Price */}
                   <div className="ml-1">
-                    <p className="text-[20px] font-bold text-[#fa8c16]">
-                      ${product?.price}
-                    </p>
+                    {discount ? (
+                      <div className="flex gap-2 justify-center items-center">
+                        <del>${price}</del>
+                        <p className="text-[20px] font-bold text-[#fa8c16]">
+                          ${result.discountedPrice.toFixed(2)}
+                        </p>
+                      </div>
+                    ) : (
+                      <p className="text-[20px] font-bold text-[#fa8c16]">
+                        ${price}
+                      </p>
+                    )}
                   </div>
                 </div>
                 {/* Add to cart */}
