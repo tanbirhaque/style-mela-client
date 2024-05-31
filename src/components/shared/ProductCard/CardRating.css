@@ -1,0 +1,9 @@
+.card-Rating .rr--has-stroke .rr--on .rr--svg {
+    stroke: none;
+    fill: #ffa700
+}
+
+.card-Rating .rr--has-stroke .rr--off .rr--svg {
+    stroke: none;
+    fill: #c8c8c8;
+}
