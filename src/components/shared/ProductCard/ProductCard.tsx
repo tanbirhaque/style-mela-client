@@ -53,7 +53,7 @@ const ProductCard = ({ product }: any) => {
     <>
       <div>
         {/* <Link href={`/${product?._id}`}> */}
-        <div className="max-w-[304px] group">
+        <div className="max-w-[377px] group">
           {/* image div */}
           <div className="relative">
             <div>
@@ -67,7 +67,7 @@ const ProductCard = ({ product }: any) => {
                   width={280}
                   height={280}
                   sizes="100vw"
-                  className="rounded-2xl h-[304px] max-w-[304px] md:w-[304px] group-hover:shadow-[rgba(0,_0,_0,_0.25)_0px_15px_40px_-12px] transition-all duration-200 ease-in-out relative"
+                  className="rounded-2xl aspect-square w-full group-hover:shadow-[rgba(0,_0,_0,_0.25)_0px_15px_40px_-12px] transition-all duration-200 ease-in-out relative"
                 />
                 {/* sale label */}
                 {discount > 0 ? (
@@ -146,7 +146,7 @@ const ProductCard = ({ product }: any) => {
                   {/* Price */}
                   <div className="ml-1">
                     {discount ? (
-                      <div className="flex gap-2 justify-center items-center">
+                      <div className="flex gap-2 items-center">
                         <del>${price}</del>
                         <p className="text-[20px] font-bold text-[#fa8c16]">
                           ${result.discountedPrice.toFixed(2)}
@@ -160,8 +160,8 @@ const ProductCard = ({ product }: any) => {
                   </div>
                 </div>
                 {/* Add to cart */}
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
-                  <button className="bg-[#fa8c16] text-white px-7 py-3 rounded-xl hover:bg-black transition-all duration-200 ease-linear">
+                <div className="w-[38%] opacity-0 group-hover:opacity-100 transition-opacity duration-300 ease-in-out">
+                  <button className="bg-[#fa8c16] py-3 text-white w-full rounded-xl hover:bg-black transition-all duration-200 ease-linear">
                     Add To Cart
                   </button>
                 </div>

@@ -39,7 +39,8 @@ const HomeProducts = () => {
         <p className="font-jost">Sitewide Discounts & Savings Of Up To 25%</p>
       </div>
       {/* <div className="flex flex-wrap gap-[30.5px] justify-center"> */}
-      <div className="flex flex-wrap gap-x-5 gap-y-8">
+      {/* <div className="flex flex-wrap gap-x-5 gap-y-8"> */}
+      <div className="grid grid-cols-4 gap-[30.5px]">
         {products.map((product: any) => (
           <ProductCard key={product._id} product={product}></ProductCard>
         ))}
