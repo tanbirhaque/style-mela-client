@@ -5,7 +5,9 @@ import React, { useState } from "react";
 
 import { FaRegEye } from "react-icons/fa6";
 import Modal from "./Modal";
-import { PiEyeThin } from "react-icons/pi";
+import { PiEyeThin, PiHeartStraightThin, PiShareFatThin, PiShareNetworkThin } from "react-icons/pi";
+import { MdShare } from "react-icons/md";
+import { HiShare } from "react-icons/hi2";
 
 // interface ProductCardProps {
 //     product: Product;
@@ -79,9 +81,19 @@ const ProductCard = ({ product }: any) => {
                 )}
               </Link>
             </div>
-            <div className="z-[999] absolute right-4 bottom-4 flex opacity-0 group-hover:opacity-100">
+            <div className="z-[999] absolute right-4 bottom-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100">
               <button
-                className="text-black text-md w-fit max-h-fit bg-white p-[6px] rounded-md"
+                className="text-black text-md w-fit max-h-fit bg-white p-[6px] rounded-[4px]  shadow-md"
+              >
+                <PiHeartStraightThin />
+              </button>
+              <button
+                className="text-black text-md w-fit max-h-fit bg-white p-[6px] rounded-[4px]  shadow-md"
+              >
+                <PiShareFatThin />
+              </button>
+              <button
+                className="text-black text-md w-fit max-h-fit bg-white p-[6px] rounded-[4px] shadow-md"
                 onClick={() => modalTriggerOpen(product)}
               >
                 <PiEyeThin />
