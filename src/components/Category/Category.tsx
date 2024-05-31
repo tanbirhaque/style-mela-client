@@ -15,6 +15,16 @@ const Category = () => {
             className="peer w-[22px] h-[22px] text-[#fa8c16] border border-gray-300 rounded checked:bg-[#fa8c16] checked:border-none appearance-none"
           />
           <div className="peer-checked:font-semibold flex justify-between items-center flex-grow">
+            <p>All</p>
+            <p className="text-[12px]">(11)</p>
+          </div>
+        </label>
+        <label className="flex items-center gap-5">
+          <input
+            type="checkbox"
+            className="peer w-[22px] h-[22px] text-[#fa8c16] border border-gray-300 rounded checked:bg-[#fa8c16] checked:border-none appearance-none"
+          />
+          <div className="peer-checked:font-semibold flex justify-between items-center flex-grow">
             <p>Hair Wigs</p>
             <p className="text-[12px]">(10)</p>
           </div>
