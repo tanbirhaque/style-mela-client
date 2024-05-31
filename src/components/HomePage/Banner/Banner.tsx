@@ -34,7 +34,7 @@ const Banner = () => {
                 >
                     <SwiperSlide>
                         <Image
-                            src={'https://i.ibb.co/2t7mnK0/Blog-Banners-2024-03-07-T113703-167.webp'}
+                            src={'https://i0.wp.com/berinaprofessional.com/wp-content/uploads/2024/01/color-care-banner-1.webp?fit=1920%2C715&ssl=1'}
                             alt=''
                             width={0}
                             height={0}
@@ -44,7 +44,7 @@ const Banner = () => {
                     </SwiperSlide>
                     <SwiperSlide>
                         <Image
-                            src={'https://i.ibb.co/L5KzsZj/banner-slideshow-04.jpg'}
+                            src={'https://moollis.com/wp-content/uploads/slider/cache/c85f0b1d398d2580d978d7686092b74d/Moroccan-Oil-Banner-Edited.webp'}
                             alt=''
                             width={0}
                             height={0}
@@ -52,83 +52,26 @@ const Banner = () => {
                             style={{ width: '100%', height: '750px' }}
                         />
                     </SwiperSlide>
-                    {/* <SwiperSlide>
+                    <SwiperSlide>
                         <Image
-                            src={'https://i.ibb.co/2t7mnK0/Blog-Banners-2024-03-07-T113703-167.webp'}
+                            src={'https://www.soultree.in/cdn/shop/collections/Hair_care.jpg?v=1713936787'}
                             alt=''
-                            className='w-full h-full'
                             width={0}
                             height={0}
                             sizes="100vw"
-                            style={{ width: '100%', height: 'auto' }}
+                            style={{ width: '100%', height: '750px' }}
                         />
                     </SwiperSlide>
                     <SwiperSlide>
                         <Image
-                            src={'https://i.ibb.co/2t7mnK0/Blog-Banners-2024-03-07-T113703-167.webp'}
+                            src={'https://store.focallurebd.com/storage/files/1/Hair-care.jpg'}
                             alt=''
-                            className='w-full h-full'
                             width={0}
                             height={0}
                             sizes="100vw"
-                            style={{ width: '100%', height: 'auto' }}
+                            style={{ width: '100%', height: '750px' }}
                         />
                     </SwiperSlide>
-                    <SwiperSlide>
-                        <Image
-                            src={'https://i.ibb.co/2t7mnK0/Blog-Banners-2024-03-07-T113703-167.webp'}
-                            alt=''
-                            className='w-full h-full'
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            style={{ width: '100%', height: 'auto' }}
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Image
-                            src={'https://i.ibb.co/2t7mnK0/Blog-Banners-2024-03-07-T113703-167.webp'}
-                            alt=''
-                            className='w-full h-full'
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            style={{ width: '100%', height: 'auto' }}
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Image
-                            src={'https://i.ibb.co/2t7mnK0/Blog-Banners-2024-03-07-T113703-167.webp'}
-                            alt=''
-                            className='w-full h-full'
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            style={{ width: '100%', height: 'auto' }}
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Image
-                            src={'https://i.ibb.co/2t7mnK0/Blog-Banners-2024-03-07-T113703-167.webp'}
-                            alt=''
-                            className='w-full h-full'
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            style={{ width: '100%', height: 'auto' }}
-                        />
-                    </SwiperSlide>
-                    <SwiperSlide>
-                        <Image
-                            src={'https://i.ibb.co/2t7mnK0/Blog-Banners-2024-03-07-T113703-167.webp'}
-                            alt=''
-                            className='w-full h-full'
-                            width={0}
-                            height={0}
-                            sizes="100vw"
-                            style={{ width: '100%', height: 'auto' }}
-                        />
-                    </SwiperSlide> */}
                 </Swiper>
             </div>
         </>
