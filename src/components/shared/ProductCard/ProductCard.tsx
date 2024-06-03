@@ -126,14 +126,14 @@ const ProductCard = ({ product }: any) => {
                   <div className="ml-1">
                     {discount ? (
                       <div className="flex flex-row-reverse gap-2 items-center">
-                        <del className="text-gray-500">&#x9F3;{price}</del>
+                        <del className="text-gray-500">${price}</del>
                         <p className="text-[22px] font-bold text-[#fa8c16]">
-                          &#x9F3;{result.discountedPrice.toFixed(2)}
+                          ${result.discountedPrice.toFixed(2)}
                         </p>
                       </div>
                     ) : (
                       <p className="text-[22px] font-bold text-[#fa8c16]">
-                        &#x9F3;{price}
+                        ${price}
                       </p>
                     )}
                   </div>
