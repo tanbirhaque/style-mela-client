@@ -12,7 +12,7 @@ import "swiper/css/navigation";
 // import required modules
 import { Grid, Navigation, Pagination } from "swiper/modules";
 
-// import "./trending.css";
+import "./trending.css";
 
 const Trending = () => {
   //fetching all products
@@ -39,11 +39,12 @@ const Trending = () => {
   }, []);
 
   return (
-    <div className="my-10 px-12">
+    <div className="custom-container my-10 relative overflow-hidden">
       <div className="flex justify-between">
         <div>
           <h1 className="font-extrabold text-3xl text-left">TRENDING ITEMS</h1>
           <p>Sitewide Discounts & Savings Of Up To 25%</p>
+          {/* <div className="swiper-button-prev">Prev</div> */}
         </div>
         {/* <div className="flex gap-2">
           <button className="w-12 h-12 hover:text-white bg-[#f5f5f5] hover:bg-[#fa8c16] flex justify-center items-center rounded-md ">
@@ -59,14 +60,13 @@ const Trending = () => {
         grid={{
           rows: 1,
         }}
-        spaceBetween={30}
         // pagination={{
         //   clickable: true,
         // }}
         // modules={[Grid, Pagination]}
         navigation={true}
         modules={[Grid, Navigation]}
-        className="mySwiper my-10"
+        className="mySwiper my-10 !px-5 !overflow-visible"
       >
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
           {products.map((product: any) => (
