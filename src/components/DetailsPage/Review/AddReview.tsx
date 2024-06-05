@@ -4,17 +4,35 @@ import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import Swal from "sweetalert2";
 import AllReviews from "./AllReviews";
 import { Rating } from "@smastrom/react-rating";
+import { useEffect, useState } from "react";
 // TODO: user data needs to be dynamic
-type Inputs = {
+interface Inputs {
   productID: string;
   name: string;
   email: string;
   message: string;
   date: string;
   rating: any;
-};
+}
+
+interface Review {
+  productID: string;
+  reviewText: string;
+  reviewerName: string;
+  reviewerEmail: string;
+  reviewRating: number;
+  date: string;
+}
 
 const AddReview = ({ productID }: any) => {
+  
+  const [reviews, setReviews] = useState<Review[]>([]);
+  useEffect(() => {
+    fetch("http://localhost:5000/reviews")
+      .then((res) => res.json())
+      .then((data) => setReviews(data));
+  }, []);
+
   // console.log(productID);
   const axiosPublic = useAxiosPublic();
   const {
@@ -43,6 +61,7 @@ const AddReview = ({ productID }: any) => {
         showConfirmButton: false,
         icon: "success",
       });
+      setReviews((previousReviews) => [...previousReviews, review]);
       reset();
     });
     // console.log(review);
@@ -101,7 +120,7 @@ const AddReview = ({ productID }: any) => {
           />
         </div>
       </form>
-      <AllReviews productID={productID} />
+      <AllReviews productID={productID} reviews={reviews} />
     </div>
   );
 };
