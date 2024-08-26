@@ -1,137 +1,251 @@
 [
-         {
-        "id": "1",
-        "title": "Clip-In Hair Extensions Aqua Globes Clip-In Hair Extensions",
-        "description": "Beautiful long curly wig suitable for various occasions.",
-        "pictures": [
-            {
-                "url": "https://www.newbeauty.com/wp-content/uploads/2021/04/extensions.png",
-                "isThumbnail": false
-            },
-            {
-                "url": "https://www.newbeauty.com/wp-content/uploads/2021/04/extensions.png",
-                "isThumbnail": false
-            },
-            {
-                "url": "https://demo.phlox.pro/shop-furniture-2/wp-content/uploads/sites/258/2020/11/Group-8070-600x600.jpg",
-                "isThumbnail": true
-            }
-        ],
-        "color": "Black",
-        "category": "Wigs",
-        "brand": "GlamourHair",
-        "materials": [
-            "Synthetic Fiber"
-        ],
-        "price": 49.99,
-        "discount": 10
-    },
     {
-        "id": "2",
-        "title": "Clip-In Hair Extensions",
-        "description": "Clip-in hair extensions for instant length and volume.",
-        "pictures": [
-            {
-                "url": "https://www.newbeauty.com/wp-content/uploads/2021/04/extensions.png",
-                "isThumbnail": true
-            },
-            {
-                "url": "https://www.newbeauty.com/wp-content/uploads/2021/04/extensions.png",
-                "isThumbnail": false
-            },
-            {
-                "url": "https://www.newbeauty.com/wp-content/uploads/2021/04/extensions.png",
-                "isThumbnail": false
-            }
-        ],
-        "color": "Blonde",
-        "category": "Extensions",
-        "brand": "HairLux",
-        "materials": [
-            "Human Hair"
-        ],
-        "price": 69.99,
-        "discount": 15
+    "_id": "6658b46726c06e7cc1fa0620",
+    "brand": {
+    "label": "MIELLE ",
+    "value": "MIELLE ",
+    "__isNew__": true
     },
+    "colors": [
     {
-        "id": "3",
-        "title": "Natural Looking Bangs",
-        "description": "Natural-looking clip-on bangs to change your look in seconds.",
-        "pictures": [
-            {
-                "url": "https://www.newbeauty.com/wp-content/uploads/2021/04/extensions.png",
-                "isThumbnail": true
-            },
-            {
-                "url": "https://www.newbeauty.com/wp-content/uploads/2021/04/extensions.png",
-                "isThumbnail": false
-            },
-            {
-                "url": "https://www.newbeauty.com/wp-content/uploads/2021/04/extensions.png",
-                "isThumbnail": false
-            }
-        ],
-        "color": "Brown",
-        "category": "Bangs",
-        "brand": "StyleFix",
-        "materials": [
-            "Synthetic Fiber"
-        ],
-        "price": 29.99,
-        "discount": 5
-    },
-    {
-        "id": "4",
-        "title": "Natural Looking Bangs",
-        "description": "Natural-looking clip-on bangs to change your look in seconds.",
-        "pictures": [
-            {
-                "url": "https://www.newbeauty.com/wp-content/uploads/2021/04/extensions.png",
-                "isThumbnail": true
-            },
-            {
-                "url": "https://www.newbeauty.com/wp-content/uploads/2021/04/extensions.png",
-                "isThumbnail": false
-            },
-            {
-                "url": "https://www.newbeauty.com/wp-content/uploads/2021/04/extensions.png",
-                "isThumbnail": false
-            }
-        ],
-        "color": "Brown",
-        "category": "Bangs",
-        "brand": "StyleFix",
-        "materials": [
-            "Synthetic Fiber"
-        ],
-        "price": 29.99,
-        "discount": 5
-    },
-    {
-        "id": "5",
-        "title": "Natural Looking Bangs",
-        "description": "Natural-looking clip-on bangs to change your look in seconds.",
-        "pictures": [
-            {
-                "url": "https://www.newbeauty.com/wp-content/uploads/2021/04/extensions.png",
-                "isThumbnail": true
-            },
-            {
-                "url": "https://www.newbeauty.com/wp-content/uploads/2021/04/extensions.png",
-                "isThumbnail": false
-            },
-            {
-                "url": "https://www.newbeauty.com/wp-content/uploads/2021/04/extensions.png",
-                "isThumbnail": false
-            }
-        ],
-        "color": "Brown",
-        "category": "Bangs",
-        "brand": "StyleFix",
-        "materials": [
-            "Synthetic Fiber"
-        ],
-        "price": 29.99,
-        "discount": 5
+    "value": "Black",
+    "label": "Black",
+    "color": "#000000"
     }
-]
+    ],
+    "description": "# Attention, please!!! **About:** This Product is very useful for hair. ***Care:*** Store in cold space and dry.",
+    "discount": 25,
+    "images": [
+    {
+    "url": "https://files.edgestore.dev/rv3ygdpnowuqss2u/publicFiles/_public/b44bd9b1-7cc2-40ed-8020-9c3e05a1e585.jpg",
+    "thumbnail": true
+    }
+    ],
+    "listingCategory": [
+    {
+    "value": "Extension",
+    "label": "Extension"
+    }
+    ],
+    "materials": [
+    {
+    "value": "Carbon",
+    "label": "Carbon"
+    }
+    ],
+    "price": 500,
+    "shortDescription": "This product is: MIELLE Rosemary Mint Organic Hair Care Set in Bangladesh",
+    "stockQuantity": 48,
+    "title": "MIELLE Rosemary Mint Organic Hair Care Set in Bangladesh",
+    "__v": 0
+    },
+    {
+    "_id": "665dc5e0547bf6371af17981",
+    "colors": [],
+    "description": "* TRESemmé Keratin Smooth System helps you to achieve silky smooth hair that's still full of natural movement * Formulated with keratin and marula oil, you can enjoy 5 benefits in 1 system * Specifically formulated to leave your hair gorgeously sleek and manageable * Helps to control frizzy hair without leaving hair looking dull * Enjoy a smooth look and feel that moves as you do",
+    "discount": 10,
+    "images": [
+    {
+    "url": "https://files.edgestore.dev/rv3ygdpnowuqss2u/publicFiles/_public/84bf5cae-e4e1-4d7f-83b0-d43e30d87499.jpg",
+    "thumbnail": true
+    }
+    ],
+    "listingCategory": [
+    {
+    "value": "Hair Care",
+    "label": "Hair Care"
+    }
+    ],
+    "materials": [],
+    "price": 3300,
+    "shortDescription": "TRESemmé Keratin Smooth with Marula Oil, Pro Collection, Shampoo and Conditioner Set … (Pro Collection)",
+    "stockQuantity": 7,
+    "title": "TRESemmé Keratin Smooth with Marula Oil",
+    "__v": 0
+    },
+    {
+    "_id": "665dc781547bf6371af1798b",
+    "colors": [
+    {
+    "value": "Ocean",
+    "label": "Ocean",
+    "color": "#00B8D9"
+    }
+    ],
+    "description": "",
+    "discount": 5,
+    "images": [
+    {
+    "url": "https://files.edgestore.dev/rv3ygdpnowuqss2u/publicFiles/_public/1bf1ce36-d938-4532-b6f6-84eccf49e345.jpg",
+    "thumbnail": true
+    }
+    ],
+    "listingCategory": [
+    {
+    "value": "Hair Care",
+    "label": "Hair Care"
+    }
+    ],
+    "materials": [],
+    "price": 90,
+    "shortDescription": "BaBylissPRO Hair Dryer, Nano Titanium 2000-Watt Blow Dryer, Professional/Ionic",
+    "stockQuantity": null,
+    "title": "BaBylissPRO Hair Dryer",
+    "__v": 0
+    },
+    {
+    "_id": "665dc89e547bf6371af17991",
+    "colors": [],
+    "description": "* You will receive one 20.2 fluid ounce bottle of Shampoo and one 20.2 fluid ounce bottle of Conditioner * HYDRATE AND NOURISH: Coconut Milk Shampoo infuses hair with moisture for more manageable hair that's less prone to damage * DEEPLY HYDRATE: Our Coconut Milk Conditioner is specifically crafted to smooth and repair for beautiful hair * REAL BOTANICALS ENDORSED BY KEW: The real botanicals in these formulas have been endorsed by the Royal Botanic Gardens, Kew * THE SCENT EXPERIENCE: Multilayered scents of vibrant coconut, a bouquet of white florals and vanilla",
+    "discount": 5,
+    "images": [
+    {
+    "url": "https://files.edgestore.dev/rv3ygdpnowuqss2u/publicFiles/_public/382760ba-2340-4527-a640-152cdd0b0fa8.jpg",
+    "thumbnail": true
+    }
+    ],
+    "listingCategory": [
+    {
+    "value": "Hair Care",
+    "label": "Hair Care"
+    }
+    ],
+    "materials": [],
+    "price": 43,
+    "shortDescription": "Herbal Essences, Shampoo and Conditioner Kit with Natural Source Ingredients, Color Safe, Bio Renew Coconut Milk, 20.2 fl oz, Kit",
+    "stockQuantity": 8,
+    "title": "Herbal Essences Shampoo and Conditioner Kit",
+    "__v": 0
+    },
+    {
+    "_id": "665dca13547bf6371af1799b",
+    "colors": [
+    {
+    "value": "Crimson",
+    "label": "Crimson",
+    "color": "#DC143C"
+    }
+    ],
+    "description": "**Garnier Fructis Full and Plush Fortifying Shampoo with Pomegranate, Hair is almost entirely made up of protein, which gives hair its strength. All-new, paraben-free Fructis formulas with Active Fruit Protein, an exclusive combination of citrus protein, Vitamins B3 B6, fruit plant-derived extracts, and strengthening conditioners, are designed for healthier, stronger hair. Lightweight Fructis Full Plush Shampoo Volumizing with Pomegranate volumizes adult hair by strand for healthy-looking thickness and plush softness with natural fluid movement.** * Garnier Fructis Plush Fortifying Shampoo with Pomegranate, Volumizing for Fine Hair 12.5 fl oz * Get visibly fuller adult hair with full and plush shampoo, conditioner and leave-in treatment * Lightweight fortifying shampoo with pomegranate volumizes fine, flat hair strand by strand * Gives hair healthy-looking thickness and plush softness with natural fluid movement * Vitamins B3 & B6, fruit & plant-derived extracts, and strengthening conditioners, are designed for healthier, stronger hair.  * Hair is almost entirely made up of protein, which gives hair its strength.",
+    "discount": 10,
+    "images": [
+    {
+    "url": "https://files.edgestore.dev/rv3ygdpnowuqss2u/publicFiles/_public/1d119d37-45d7-438c-8029-c6dc5639c970.jpg",
+    "thumbnail": true
+    }
+    ],
+    "listingCategory": [
+    {
+    "value": "Hair Care",
+    "label": "Hair Care"
+    }
+    ],
+    "materials": [],
+    "price": 22,
+    "shortDescription": "Garnier Fructis Plush Fortifying Shampoo with Pomegranate, Volumizing for Fine Hair 12.5 fl oz",
+    "stockQuantity": 5,
+    "title": "Garnier Fructis Plush Fortifying Shampoo",
+    "__v": 0
+    },
+    {
+    "_id": "665dcbda547bf6371af179a3",
+    "brand": {
+    "label": "Kerastase",
+    "value": "Kerastase",
+    "__isNew__": true
+    },
+    "colors": [],
+    "description": "**Build up magnificent body with Kerastase Densifique Bain Densite, a highly effective volumizing shampoo for thin hair. Everyday life stressors, thermal styling and harsh environmental pollutants take a toll on hair. If hair has been thinning and has lost bounce and vibrancy, this is the best hydrating shampoo to return it to a soft and healthy looking state. This powerhouse cleanser transforms limp locks into a mane that looks visibly full and bounces with every step. The addition of Stemoxydine, an advanced densifying molecule, provides tresses with enviable body and density. Formulated with hyaluronic acid, this shampoo fortifies each strand from root to tip, giving it the resilience it needs to stand up against everyday hair dangers. The potent combination of Power Renewal Complex and Ceramide technology deeply penetrates hair fibers, imparting strength and extra shine. With Gluco-Peptide, this shampoo smooths hair cuticles to restore tresses to a manageable state that radiates body, shine, smoothness and health. Don't suffer with thinning hair when Kerastase can help you obtain the full flowing locks you dream of.** * Everyday life stressors thermal styling and harsh environmental pollutants take a toll on hair * Bodifying Shampoo * If hair has been thinning and has lost bounce and vibrancy this is the best hydrating shampoo to return it to a soft and healthy looking state",
+    "discount": 5,
+    "images": [
+    {
+    "url": "https://files.edgestore.dev/rv3ygdpnowuqss2u/publicFiles/_public/16c286dd-cd96-47b3-b867-31d7b9db6ffe.jpg",
+    "thumbnail": true
+    }
+    ],
+    "listingCategory": [
+    {
+    "value": "Hair Care",
+    "label": "Hair Care"
+    }
+    ],
+    "materials": [],
+    "price": 30,
+    "shortDescription": "Kérastase Densifique Bodifying Shampoo and Conditioner",
+    "stockQuantity": null,
+    "title": "Kerastase Densifique Bain Densite Shampoo 8.5 oz",
+    "__v": 0
+    },
+    {
+    "_id": "665dcd52547bf6371af179b3",
+    "colors": [],
+    "description": "**Product Description Heat-activated bodybuilder plumps strands to expand volume for noticeably thicker hair with maximum color and heat protection. Heat-activated blow dry Spray naturally plumps each strand. Provides unsurpassed color and heat protection. Brand Story ColorProof is a complete line of professional products designed exclusively for color-treated hair. These formulas combine the latest innovations in ingredient technology with best-in-class ingredients to create a new standard.**",
+    "discount": 5,
+    "images": [
+    {
+    "url": "https://files.edgestore.dev/rv3ygdpnowuqss2u/publicFiles/_public/53fb8414-23e9-405d-a476-b9dc568d573b.jpg",
+    "thumbnail": true
+    }
+    ],
+    "listingCategory": [
+    {
+    "value": "Hair Care",
+    "label": "Hair Care"
+    }
+    ],
+    "materials": [],
+    "price": 30,
+    "shortDescription": "ColorProof SuperPlump Thickening Blow Dry Spray - Color-Safe, Volumizing, Vegan, Sulfate-Free, Salt-Free, Unisex - Professional Hair Product",
+    "stockQuantity": 4,
+    "title": "ColorProof SuperPlump",
+    "__v": 0
+    },
+    {
+    "_id": "665dce77547bf6371af179b9",
+    "brand": {
+    "label": "joico",
+    "value": "joico",
+    "__isNew__": true
+    },
+    "colors": [],
+    "description": "What it is: Convenient doesn't begin to describe Joico's superstar Moisture Recovery Co+Wash. They've merged their most cleansing shampoo and nourishing conditioner (designed to infuse dry, brittle hair with intensive, repair ingredients)...saving you time, money, and breakage with one just a single dollop of this aerated, sulfate-free, ultra-rich cream. Use just a tiny bit, and you'll have slip-and-slide shine in an instant. Water/Aqua/Eau, Cetearyl Alcohol, Decyl Glucoside, Hydroxypropyl Starch Phosphate, Behentrimonium Chloride, Isobutane, Glycerin, Ceteareth-20, Sodium Cocoamphoacetate, Butyrospermum Parkii (Shea) Butter, Simmondsia Chinensis (Jojoba) Seed Oil, Hydrolyzed Keratin, Cocodimonium Hydroxypropyl Hydrolyzed Keratin, Astrocaryum Murumuru Seed Butter, Pentapeptide-30 Cysteinamide, Pentapeptide-29 Cysteinamide, Tetrapeptide-29 Argininamide, Tetrapeptide-28 Argininamide, Hydrolyzed Algin, Sea Water/Maris Aqua/Eau De Mer, Chlorella Vulgaris Extract, Bis-Diisopropanolamino-PG-Propyl Dimethicone/Bis-Isobutyl PEG-14 Copolymer, Bis-Cetearyl Amodimethicone, Quaternium-91, Amodimethicone, Citric Acid, DMDM Hydantoin, Polyquaternium-7, Tetrasodium EDTA, Myristyl Myristate, Polysorbate 20, Butyloctanol, Trideceth-12, Cetrimonium Chloride, Ceteareth-7, Ceteareth-25, Magnesium Nitrate, Stearyl Dihydroxypropyldimonium Oligosaccharides, Propylene Glycol, Methylchloroisothiazolinone, Magnesium Chloride, Methylisothiazolinone, Isopropyl Alcohol, Limonene, Benzyl Benzoate, Fragrance/Parfum.Dispense, emulsify and apply to wet hair. Leave in 5 minutes. Rinse. Product Options Available are as follows: Size : 8.5 oz - Joico Curl Co-Wash Whipped Cleansing Conditioner Dry Hair.",
+    "discount": null,
+    "images": [
+    {
+    "url": "https://files.edgestore.dev/rv3ygdpnowuqss2u/publicFiles/_public/5d876459-ecfe-4e6e-9264-90ace977616a.jpg",
+    "thumbnail": true
+    }
+    ],
+    "listingCategory": [
+    {
+    "value": "Hair Care",
+    "label": "Hair Care"
+    }
+    ],
+    "materials": [],
+    "price": 22,
+    "shortDescription": "Joico's superstar Moisture Recovery Co+Wash have merged their most cleansing shampoo and nourishing conditioner (designed to infuse dry, brittle hair with intensive, repair ingredients)...saving you time, money, and breakage with one just a single dollop of this aerated, sulfate-free, ultra-rich cream. Use just a tiny bit, and you'll have slip-and-slide shine in an instant.",
+    "stockQuantity": null,
+    "title": "Joico Curl Co-Wash Whipped Cleansing Conditioner Dry Hair Size : 8.5 Oz",
+    "__v": 0
+    },
+    {
+    "_id": "665dd0a7547bf6371af179bd",
+    "colors": [],
+    "description": "* Moisturizing Hair Treatment - 8 Second Wonder Water Lamellar Hair Treatment is the new generation of premium hair treatment. This liquid rinse out formula visibly transforms hair from the first use * 8 Seconds to Silkier, Shinier Hair - Upon contact with wet hair, this treatment works in just 8 seconds to visibly transform hair in a single use. Damaged hair feels healthy, shiny, and silky * Expert Treatments - Our Elvive line features powerful treatments formulated with superior technology to revive all forms of hair damage, whether it's from heat styling, color processing, or dryness * Use on wet hair after shampoo, 1 dose for fine to medium hair, 2-3 doses for thick or curly hair, add 1 more dose if you have long hair - Apply to lengths, avoid scalp. Follow with conditioner and blow dry for optimal results * L'Oreal Paris Beauty - A leading total beauty care company based in Paris, we offer innovative products and unique expertise from beauty experts in makeup, skin care, hair care, styling and hair color",
+    "discount": null,
+    "images": [
+    {
+    "url": "https://files.edgestore.dev/rv3ygdpnowuqss2u/publicFiles/_public/0a6e4e2d-181f-4ba1-aa37-de4409bc007d.jpg",
+    "thumbnail": true
+    }
+    ],
+    "listingCategory": [],
+    "materials": [],
+    "price": 12,
+    "shortDescription": "L'Oreal Paris Elvive Wonder Water Hair Transforming Lamellar Rinse Out, Wonder Water Lamellar Technology is 8 seconds to silkier, shinier, healthier looking hair. A new generation of premium treatment.",
+    "stockQuantity": null,
+    "title": "L'Oreal Paris Elvive Wonder Water Hair Transforming Lamellar Rinse Out Scalp Care for Normal Hair, 6.8 fl oz",
+    "__v": 0
+    }
+    ]

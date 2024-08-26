@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import ReviewData from "./ReviewData";
 
-const AllReviews = ({ productID }: any) => {
-  const [reviews, setReviews] = useState([]);
+const AllReviews = ({ productID, reviews }: any) => {
+  // const [reviews, setReviews] = useState([]);
 
-  useEffect(() => {
-    fetch("http://localhost:5000/reviews")
-      .then((res) => res.json())
-      .then((data) => setReviews(data));
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:5000/reviews")
+  //     .then((res) => res.json())
+  //     .then((data) => setReviews(data));
+  // }, []);
 
   //filtering reviews
   const filteredReviews = reviews.filter(

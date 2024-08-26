@@ -9,7 +9,7 @@ import {
 const Footer = () => {
   return (
     <>
-      <div className="p-5 md:px-10 text-[#000000] flex justify-between flex-col md:flex-row gap-3 md:gap-0">
+      <div className="max-w-[1600px] mx-auto py-5 text-[#000000] flex justify-between flex-col md:flex-row gap-3 md:gap-0">
         <div className="flex gap-10">
           <svg
             xmlns="http://www.w3.org/2000/svg"
