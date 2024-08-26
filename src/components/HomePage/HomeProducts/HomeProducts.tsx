@@ -7,28 +7,28 @@ import { Product } from "@/types/product";
 const HomeProducts = () => {
   // console.log(products);
 
-  const [products, setProducts] = useState([]);
+  // const [products, setProducts] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch("http://localhost:5000/all-products", {
-          method: "GET",
-        });
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const res = await fetch("http://localhost:5000/all-products", {
+  //         method: "GET",
+  //       });
 
-        if (!res.ok) {
-          throw new Error("Network response was not ok");
-        }
+  //       if (!res.ok) {
+  //         throw new Error("Network response was not ok");
+  //       }
 
-        const data = await res.json();
-        setProducts(data);
-      } catch (error) {
-        console.error("There was a problem fetching the data:", error);
-      }
-    };
+  //       const data = await res.json();
+  //       setProducts(data);
+  //     } catch (error) {
+  //       console.error("There was a problem fetching the data:", error);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   console.log(products);
 
