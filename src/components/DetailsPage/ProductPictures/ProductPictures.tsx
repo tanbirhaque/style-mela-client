@@ -16,11 +16,18 @@ import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 import ImageMagnifier from './MagnifyComponent/MagnifyComponent';
 import data from '../../../data/democard.json';
 
+type Image = {
+    url: string;
+    thumbnail: boolean;
+};
+
 
 
 
 const ProductPictures = ({ productID }: any) => {
-    const [images, setImages] = useState([]);
+    const [images, setImages] = useState<Image[]>([]);
+
+    // const [images, setImages] = useState([]);
     // console.log(images);
     // console.log(productID);
     // useEffect(() => {
