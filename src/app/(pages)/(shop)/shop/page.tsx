@@ -4,33 +4,34 @@ import Category from "@/components/Category/Category";
 import Cover from "@/components/shared/Cover/Cover";
 import ProductCard from "@/components/shared/ProductCard/ProductCard";
 import { useEffect, useRef, useState } from "react";
+import products from "@/data/democard.json";
 
 const Page = () => {
   const [dropOpen, setDropOpen] = useState(false)
   const dropdownRef = useRef<HTMLDivElement | null>(null)
   const [sortValue, setSortValue] = useState('Default')
   //fetching all products
-  const [products, setProducts] = useState([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch("http://localhost:5000/all-products", {
-          method: "GET",
-        });
+  // const [products, setProducts] = useState([]);
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const res = await fetch("http://localhost:5000/all-products", {
+  //         method: "GET",
+  //       });
 
-        if (!res.ok) {
-          throw new Error("Network response was not ok");
-        }
+  //       if (!res.ok) {
+  //         throw new Error("Network response was not ok");
+  //       }
 
-        const data = await res.json();
-        setProducts(data);
-      } catch (error) {
-        console.error("There was a problem fetching the data:", error);
-      }
-    };
+  //       const data = await res.json();
+  //       setProducts(data);
+  //     } catch (error) {
+  //       console.error("There was a problem fetching the data:", error);
+  //     }
+  //   };
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   const handleDropOpen = () => {
     setDropOpen(!dropOpen);
