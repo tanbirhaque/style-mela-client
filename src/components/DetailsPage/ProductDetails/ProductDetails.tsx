@@ -9,6 +9,7 @@ import "./style.css";
 import CircleFillHoverBtn from "@/components/shared/Buttons/CircleFillHoverBtn/CircleFillHoverBtn";
 import { PiHeartLight } from "react-icons/pi";
 import { PiShareNetworkLight } from "react-icons/pi";
+import data from '../../../data/democard.json';
 
 // Comment for commit
 // TODO: have to implement exact category
@@ -18,28 +19,44 @@ const ProductDetails = ({ productID }: any) => {
   const [productInfo, setProductInfo] = useState();
   const { title, price, shortDescription }: any = productInfo || {};
   // console.log(productInfo);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const res = await fetch(
-          `http://localhost:5000/single-product/${productID}`,
-          {
-            method: "GET",
-          }
-        );
-        if (!res.ok) {
-          throw new Error("Network response was not ok");
-        }
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const res = await fetch(
+  //         `http://localhost:5000/single-product/${productID}`,
+  //         {
+  //           method: "GET",
+  //         }
+  //       );
+  //       if (!res.ok) {
+  //         throw new Error("Network response was not ok");
+  //       }
 
-        const data = await res.json();
-        setProductInfo(data);
-      } catch (error) {
-        console.error("There was a problem fetching the data:", error);
+  //       const data = await res.json();
+  //       setProductInfo(data);
+  //     } catch (error) {
+  //       console.error("There was a problem fetching the data:", error);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, [productID]);
+
+  useEffect(() => {
+    const fetchData = () => {
+      // Find the product by ID
+      const product: any = data.find(item => item._id === productID);
+
+      if (product) {
+        setProductInfo(product);
+      } else {
+        console.error('Product not found');
       }
     };
 
     fetchData();
   }, [productID]);
+
 
   // console.log(description);
 
