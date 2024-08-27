@@ -14,6 +14,8 @@ import './style.css'
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules';
 // import { ProductPicturesProps } from '@/types/product';
 import ImageMagnifier from './MagnifyComponent/MagnifyComponent';
+import data from '../../../data/democard.json';
+
 
 
 
@@ -21,25 +23,39 @@ const ProductPictures = ({ productID }: any) => {
     const [images, setImages] = useState([]);
     // console.log(images);
     // console.log(productID);
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         try {
+    //             const res = await fetch(`http://localhost:5000/single-product/${productID}`, {
+    //                 method: "GET"
+    //             })
+    //             if (!res.ok) {
+    //                 throw new Error('Network response was not ok');
+    //             }
+
+    //             const data = await res.json();
+    //             setImages(data.images);
+    //         } catch (error) {
+    //             console.error('There was a problem fetching the data:', error);
+    //         }
+    //     }
+
+    //     fetchData()
+    // }, [productID])
     useEffect(() => {
-        const fetchData = async () => {
-            try {
-                const res = await fetch(`http://localhost:5000/single-product/${productID}`, {
-                    method: "GET"
-                })
-                if (!res.ok) {
-                    throw new Error('Network response was not ok');
-                }
+        const fetchData = () => {
+            // Find the product by ID
+            const product = data.find(item => item._id === productID);
 
-                const data = await res.json();
-                setImages(data.images);
-            } catch (error) {
-                console.error('There was a problem fetching the data:', error);
+            if (product) {
+                setImages(product.images);
+            } else {
+                console.error('Product not found');
             }
-        }
+        };
 
-        fetchData()
-    }, [productID])
+        fetchData();
+    }, [productID]);
 
     const [thumbsSwiper, setThumbsSwiper] = useState<any | null>(null);
     const [theURL, setTheURL] = useState('')
@@ -66,7 +82,7 @@ const ProductPictures = ({ productID }: any) => {
                     className="mySwiper2"
                 >
                     {
-                        images?.map((item:any, index) => (
+                        images?.map((item: any, index) => (
                             <div key={index}>
                                 <SwiperSlide>
                                     <Image
@@ -140,7 +156,7 @@ const ProductPictures = ({ productID }: any) => {
                     className="mySwiper prevSlide mt-[10px]"
                 >
                     {
-                        images?.map((item:any, index) => (
+                        images?.map((item: any, index) => (
                             <div key={index}>
                                 <SwiperSlide>
                                     <Image
