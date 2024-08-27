@@ -18,6 +18,7 @@ import "./CardRating.css"
 
 const ProductCard = ({ product }: any) => {
   const { _id, images, price, discount } = product || {};
+  // console.log(product);
 
   const getThumbnailImageObject = product?.images?.find(
     (thumbnail: any) => thumbnail?.thumbnail
@@ -62,7 +63,7 @@ const ProductCard = ({ product }: any) => {
           {/* image div */}
           <div className="relative">
             <div>
-              <Link href={`/${product?._id}`}>
+              <Link href={`/${_id}`}>
                 <Image
                   src={`${Thumbnail_URL !== undefined
                     ? Thumbnail_URL

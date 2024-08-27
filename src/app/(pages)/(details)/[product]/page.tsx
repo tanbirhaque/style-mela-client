@@ -6,6 +6,7 @@ import Product_info from '@/components/DetailsPage/Product_info/Product_info';
 
 const Page = ({ params }: { params: { product: string } }) => {
     const productID = params.product
+    console.log(productID);
 
     return (
         <>
